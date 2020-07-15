@@ -1,10 +1,26 @@
-.navbar {
-    width: 320px;
-    height: 80px;
+header {
+    background-color: $nav-background-color;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav {
-    width: 160px;
+    display: flex;
+    align-items: flex-end;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.primary-nav {
+    font-family: "Avenir-Demi";
+    color: $nav-text-color;
+    text-decoration: none;
+    text-align: center;
 }
 
 .hero {
@@ -16,4 +32,20 @@ nav {
     width: 288px;
     height: 145px;
     margin: 16px 16px;
+}
+
+h1, h2, h4 {
+    color: $global-text-color;
+}
+
+h1 {
+    font-family: 'Avenir-Bold';
+}
+
+h2, h5 {
+    font-family: 'Avenir-Demi';
+}
+
+h4 {
+    font-family: 'Avenir-Regular';
 }

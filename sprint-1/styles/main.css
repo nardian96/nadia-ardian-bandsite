@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  padding: 0px 16px;
+  padding: 0;
   width: 320px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,5 +12,109 @@ body {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Avenir-Bold';
+  src: url(/sprint-1/assets/fonts/AvenirNextLTPro-Bold.woff2) format("woff2"), url(/sprint-1/assets/fonts/AvenirNextLTPro-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Avenir-Demi';
+  src: url(/sprint-1/assets/fonts/AvenirNextLTPro-Demi.woff2) format("woff2"), url(/sprint-1/assets/fonts/AvenirNextLTPro-Demi.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Avenir-Regular';
+  src: url(/sprint-1/assets/fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(/sprint-1/assets/fonts/AvenirNextLTPro-Regular.woff) format("woff");
+}
+
+header {
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.primary-nav {
+  font-family: "Avenir-Demi";
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero {
+  width: 100%;
+  height: 183px;
+}
+
+.images {
+  width: 288px;
+  height: 145px;
+  margin: 16px 16px;
+}
+
+h1, h2, h4 {
+  color: #323232;
+}
+
+h1 {
+  font-family: 'Avenir-Bold';
+}
+
+h2, h5 {
+  font-family: 'Avenir-Demi';
+}
+
+h4 {
+  font-family: 'Avenir-Regular';
+}
+
+header {
+  width: 320px;
+  height: 80px;
+}
+
+.logo__container {
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  left: 100px;
+  top: 10px;
+}
+
+.logo__image {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/logo/Logo-bandsite.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+li {
+  width: 160px;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

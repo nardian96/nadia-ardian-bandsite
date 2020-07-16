@@ -47,3 +47,8 @@ h2, h5 {
 h4 {
     font-family: 'Avenir-Regular';
 }
+
+footer {
+    background-color: $footer-background-color;
+    display: flex;
+}

@@ -69,6 +69,13 @@ h4 {
   font-family: 'Avenir-Regular';
 }
 
+footer {
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header {
   min-width: 320px;
   height: 80px;
@@ -285,5 +292,59 @@ h1 {
     width: 50%;
     margin: 0 11.25rem;
   }
+}
+
+footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2.5rem;
+}
+
+.title__text {
+  color: #FFFFFF;
+  font-size: 30px;
+  padding-left: 1rem;
+}
+
+.icons__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10rem;
+  height: 20px;
+  padding-left: 16px;
+}
+
+.icons__item-container {
+  width: 3.33rem;
+  height: 100%;
+}
+
+.icons__item {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icons__item--instagram {
+  background-image: url(/sprint-1/assets/icons/svg/Icon-instagram.svg);
+}
+
+.icons__item--facebook {
+  background-image: url(/sprint-1/assets/icons/svg/Icon-facebook.svg);
+}
+
+.icons__item--twitter {
+  background-image: url(/sprint-1/assets/icons/svg/Icon-twitter.svg);
 }
 /*# sourceMappingURL=main.css.map */

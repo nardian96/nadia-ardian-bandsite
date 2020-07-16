@@ -82,9 +82,22 @@ header {
           justify-content: center;
 }
 
+.navbar__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .logo__container {
-  width: 120px;
-  height: 40px;
+  width: 7.5rem;
+  height: 14px;
+  padding: 16px 0;
 }
 
 .logo__image {
@@ -102,25 +115,82 @@ nav {
 }
 
 ul {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 li {
-  width: 50%;
+  width: 10rem;
   text-align: center;
 }
 
 li .primary-nav {
+  width: 100%;
   font-family: "Avenir-Demi";
   color: #FFFFFF;
   text-decoration: none;
   text-align: center;
+  position: relative;
 }
 
-.border__nav {
-  border-bottom: 3px solid #FFFFFF;
+li .primary-nav--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  top: 30px;
+  height: 4px;
+  width: 10rem;
+  background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    min-width: 768px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__container {
+    width: 30rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    width: 60%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo__container {
+    padding: 30px 0 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  li {
+    padding-bottom: 10px;
+  }
+  li .primary-nav--active::after {
+    bottom: 60px;
+  }
 }
 
 .hero {

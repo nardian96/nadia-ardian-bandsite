@@ -8,11 +8,21 @@ header {
     justify-content: center;
 }
 
+.navbar {
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 .logo {
     
     &__container {
-        width: 120px;
-        height: 40px;
+        width: 7.5rem;
+        height: 14px;
+        padding: 16px 0;
         // display: flex;
         // align-items: center;
     }
@@ -23,11 +33,7 @@ header {
         background-size: contain;
         background-repeat: no-repeat;
     }
-        // @include tablet {
-    //     &__container {
-    //         position: relative;
-    //     }
-    // }
+   
 }
 
 
@@ -36,23 +42,85 @@ nav {
 }
 
 ul {
-justify-content: space-between;
+justify-content: space-around;
 }
 
 li {
-    width: 50%;
+    width: 10rem;
     text-align: center;
 
     .primary-nav {
+        width: 100%;
         font-family: "Avenir-Demi";
         color: $nav-text-color;
         text-decoration: none;
         text-align: center;
+        position: relative;
+        &--active {
+            &::after {
+                content:'';
+                position: absolute;
+                bottom: 0;
+                left:-50px;
+                top: 30px;
+                height: 4px;
+                width: 10rem;
+                background-color: $nav-active-color;
+                }
+            }
+        }
+}
+
+// TABLET STYLING
+
+header {
+    @include tablet {
+        min-width: 768px;
+        // height: 80px;
+        // display: flex;
+        // flex-wrap: wrap;
+        justify-content: flex-start;
     }
 }
 
-.border {
-    &__nav {
-        border-bottom: 3px solid $nav-text-color;
+.navbar {
+    @include tablet {
+        &__container {
+            width: 30rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+}
+
+nav {
+    @include tablet {
+    width: 60%;
+    justify-content: space-between;
+    align-items: flex-end;
+    }
+}
+
+.logo {
+    @include tablet {
+        &__container {
+            padding: 30px 0 0;
+        }
+    }
+}
+
+li {
+    @include tablet {
+        padding-bottom: 10px;
+        .primary-nav {
+            &--active {
+                &::after {
+                bottom: 60px;
+                }
+            }
+        }
+        
     }
 }

@@ -2,6 +2,23 @@
 
 footer {
     flex-direction: column;
+    padding-left: 1rem;
+}
+
+h2, h4 {
+    color: $footer-text-color;
+    margin: 0;
+}
+
+h2 {
+    font-size: 14px;
+    margin: 0;
+}
+
+h4 {
+    font-size: 13px;
+    height: 2.5rem;
+    margin-top: 1rem;
 }
 
 .title {
@@ -12,8 +29,8 @@ footer {
     }
     &__text {
         color: $footer-text-color;
-        font-size: 30px;
-        padding-left: 1rem;
+        font-size: 24px;
+        // padding-left: 1rem;
     }
 }
 
@@ -22,7 +39,7 @@ footer {
         display: flex;
         width: 10rem;
         height: 20px;
-        padding-left: 16px;
+        // padding-left: 1rem;
 
     }
 
@@ -45,4 +62,21 @@ footer {
             background-image: url(/sprint-1/assets/icons/svg/Icon-twitter.svg);
         }    
     }
+}
+
+.contact {
+    &__container {
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    &__item {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.62rem;
+        }
+    
 }

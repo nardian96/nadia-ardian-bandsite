@@ -60,7 +60,7 @@ li {
             &::after {
                 content:'';
                 position: absolute;
-                bottom: 0;
+                bottom: 50px;
                 left:-50px;
                 top: 30px;
                 height: 4px;
@@ -110,11 +110,11 @@ nav {
 
 li {
     @include tablet {
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
         .primary-nav {
             &--active {
                 &::after {
-                bottom: 60px;
+                bottom: 30px;
                 }
             }
         }

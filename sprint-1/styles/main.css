@@ -143,7 +143,7 @@ li .primary-nav {
 li .primary-nav--active::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   left: -50px;
   top: 30px;
   height: 4px;
@@ -192,11 +192,8 @@ li .primary-nav--active::after {
 }
 
 @media screen and (min-width: 768px) {
-  li {
-    padding-bottom: 10px;
-  }
   li .primary-nav--active::after {
-    bottom: 60px;
+    bottom: 30px;
   }
 }
 
@@ -299,6 +296,23 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 1rem;
+}
+
+h2, h4 {
+  color: #FFFFFF;
+  margin: 0;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 0;
+}
+
+h4 {
+  font-size: 13px;
+  height: 2.5rem;
+  margin-top: 1rem;
 }
 
 .title__container {
@@ -311,8 +325,7 @@ footer {
 
 .title__text {
   color: #FFFFFF;
-  font-size: 30px;
-  padding-left: 1rem;
+  font-size: 24px;
 }
 
 .icons__container {
@@ -321,7 +334,6 @@ footer {
   display: flex;
   width: 10rem;
   height: 20px;
-  padding-left: 16px;
 }
 
 .icons__item-container {
@@ -346,5 +358,32 @@ footer {
 
 .icons__item--twitter {
   background-image: url(/sprint-1/assets/icons/svg/Icon-twitter.svg);
+}
+
+.contact__container {
+  margin: 2rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact__item {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.62rem;
 }
 /*# sourceMappingURL=main.css.map */

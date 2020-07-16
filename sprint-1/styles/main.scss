@@ -1,75 +1,9 @@
-@import './partials/reset';
 @import './partials/fonts';
 @import './partials/variables';
 @import './partials/global';
 @import './partials/mixins';
-
-header {
-    min-width: 320px;
-    height: 80px;
-}
-
-.logo {
-    
-    &__container {
-        width: 120px;
-        height: 40px;
-        // display: flex;
-        // align-items: center;
-        position: absolute;
-        left: 100px;
-        top: 10px;
-    }
-    &__image {
-        width: 100%;
-        height: 100%;
-        background-image: url(../assets/logo/Logo-bandsite.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    // @include tablet {
-    //     &__container {
-    //         position: relative;
-    //     }
-    // }
-}
-
-
-
-.border {
-    &__nav {
-        border-bottom: 3px solid $nav-text-color;
-    }
-}
-
-.hero {
-    width: 100%;
-    height: 183px;
-    background-image: url(../assets/images/concert-1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-
-    &__container {
-        margin: 0 16px;
-    }
-
-    @include tablet {
-        &__container {
-            margin: 0 24px;
-        }
-    }
-
-    &__title {
-        color: $hero-text-color;
-        width: 250px;
-    }
-}
-
-
-
-
+@import './partials/navbar';
+@import './partials/hero';
 
 
 

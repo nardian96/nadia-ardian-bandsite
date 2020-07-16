@@ -1,0 +1,58 @@
+// MOBILE STYLING
+
+header {
+    min-width: 320px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    
+    &__container {
+        width: 120px;
+        height: 40px;
+        // display: flex;
+        // align-items: center;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        background-image: url(../assets/logo/Logo-bandsite.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+        // @include tablet {
+    //     &__container {
+    //         position: relative;
+    //     }
+    // }
+}
+
+
+nav {
+    align-items: flex-end;
+}
+
+ul {
+justify-content: space-between;
+}
+
+li {
+    width: 50%;
+    text-align: center;
+
+    .primary-nav {
+        font-family: "Avenir-Demi";
+        color: $nav-text-color;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+.border {
+    &__nav {
+        border-bottom: 3px solid $nav-text-color;
+    }
+}

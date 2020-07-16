@@ -1,28 +1,37 @@
 header {
     background-color: $nav-background-color;
     display: flex;
-    justify-content: space-around;
+    // flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
 }
 
 nav {
+    width: 100%;
     display: flex;
     align-items: flex-end;
 }
 
 ul {
+    width: 100%;
     list-style-type: none;
     padding: 0px;
     display: flex;
     justify-content: space-between;
 }
 
-.primary-nav {
-    font-family: "Avenir-Demi";
-    color: $nav-text-color;
-    text-decoration: none;
+li {
+    width: 50%;
     text-align: center;
+
+    .primary-nav {
+        font-family: "Avenir-Demi";
+        color: $nav-text-color;
+        text-decoration: none;
+        text-align: center;
 }
 
+}
 .hero {
     width: 100%;
     height: 183px; 

@@ -244,20 +244,46 @@ li .primary-nav--active::after {
   margin: 0 16px;
 }
 
-@media screen and (min-width: 768px) {
-  .hero__container {
-    margin: 0 24px;
-  }
-}
-
 .hero__title {
   color: #FFFFFF;
-  width: 250px;
+  width: 70%;
+}
+
+h1 {
+  font-size: 24px;
 }
 
 .images {
   width: 288px;
   height: 145px;
   margin: 16px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 400px;
+  }
+  .hero__container {
+    margin: 0 1.5rem;
+  }
+  .hero__title {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    height: 670px;
+  }
+  .hero__container {
+    width: 50%;
+    margin: 0 11.25rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

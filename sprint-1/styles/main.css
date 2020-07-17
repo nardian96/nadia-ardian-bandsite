@@ -289,6 +289,38 @@ h1 {
   }
 }
 
+.gallery {
+  background-color: #FAFAFA;
+  min-width: 100%;
+  padding: 0 1rem;
+}
+
+.gallery h1 {
+  padding: 2rem 0 1.5rem;
+  margin: 0;
+}
+
+.gallery__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery__container div {
+  min-height: 8.15rem;
+  margin-bottom: 1rem;
+}
+
+.gallery__container div img {
+  width: 100%;
+}
+
 header {
   min-width: 320px;
   height: 80px;

@@ -9,10 +9,10 @@
         margin: 0;
     }
     &__container {
-        width: 100%;
+        min-width: 100%;
         display: flex;
         flex-wrap: wrap;
-        // justify-content: center;
+        padding-bottom: 1rem;
         div {
             min-height: 8.15rem;
             margin-bottom: 1rem;

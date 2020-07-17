@@ -307,9 +307,6 @@ h1 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .gallery__container div {
@@ -319,6 +316,29 @@ h1 {
 
 .gallery__container div img {
   width: 100%;
+}
+
+.gallery {
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 0 1.5rem;
+  }
+  .gallery h1 {
+    font-size: 36px;
+  }
+  .gallery__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .gallery__container div {
+    width: 14rem;
+    height: 7.8rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 header {

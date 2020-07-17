@@ -1,3 +1,5 @@
+//MOBILE STYLING
+
 .gallery {
     background-color: $gallery-background-color;
     min-width: 100%;
@@ -10,7 +12,7 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        // justify-content: center;
         div {
             min-height: 8.15rem;
             margin-bottom: 1rem;
@@ -20,5 +22,26 @@
             }
         }    
     }    
+}
+
+//TABLET STYLING
+
+.gallery {
+    padding-bottom: 3rem;
+    @include tablet {
+        padding: 0 1.5rem;
+        h1 {
+            font-size: 36px;
+        }
+        &__container {
+            justify-content: space-between;
+            div {
+                width: 14rem;
+                height: 7.8rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    }
 }
     

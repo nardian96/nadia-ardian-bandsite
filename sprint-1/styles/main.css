@@ -316,10 +316,7 @@ h1 {
 
 .gallery__container div img {
   width: 100%;
-}
-
-.gallery {
-  padding-bottom: 3rem;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -330,6 +327,7 @@ h1 {
     font-size: 36px;
   }
   .gallery__container {
+    padding-bottom: 1rem;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -338,6 +336,22 @@ h1 {
     width: 14rem;
     height: 7.8rem;
     margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gallery {
+    padding: 0 11.25rem;
+  }
+  .gallery h1 {
+    padding: 3rem 0 4rem;
+  }
+  .gallery__container {
+    padding-bottom: 1rem;
+  }
+  .gallery__container div {
+    width: 21.5rem;
+    height: 12.06rem;
   }
 }
 

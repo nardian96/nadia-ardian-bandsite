@@ -143,7 +143,7 @@ li .primary-nav--active::after {
   position: absolute;
   bottom: 50px;
   left: -50px;
-  top: 30px;
+  top: 26px;
   height: 4px;
   width: 10rem;
   background-color: #FFFFFF;
@@ -168,6 +168,9 @@ li .primary-nav--active::after {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -185,13 +188,13 @@ li .primary-nav--active::after {
 
 @media screen and (min-width: 768px) {
   .logo__container {
-    padding: 30px 0 0;
+    padding-bottom: 2.18rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   li .primary-nav--active::after {
-    bottom: 30px;
+    top: 43px;
   }
 }
 
@@ -289,6 +292,52 @@ h1 {
   }
 }
 
+.biography__container {
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.biography__title {
+  padding: 2.5rem 0 1.5rem;
+  margin: 0;
+}
+
+.images__container {
+  width: 90vw;
+  min-height: 8.15rem;
+}
+
+.images__container img {
+  width: 100%;
+  height: 100%;
+}
+
+.text__container {
+  padding-bottom: 2.5rem;
+}
+
+.text__quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.text__quote h2 {
+  color: #323232;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 0 0 2rem;
+}
+
 .gallery {
   background-color: #FAFAFA;
   min-width: 100%;
@@ -334,8 +383,8 @@ h1 {
             justify-content: space-between;
   }
   .gallery__container div {
-    width: 14rem;
-    height: 7.8rem;
+    width: 29.16vw;
+    height: 16.40vw;
     margin-bottom: 1.5rem;
   }
 }
@@ -351,8 +400,8 @@ h1 {
     padding-bottom: 1rem;
   }
   .gallery__container div {
-    width: 21.5rem;
-    height: 12.06rem;
+    width: 23.8vw;
+    height: 13.35vw;
   }
 }
 
@@ -425,7 +474,7 @@ li .primary-nav--active::after {
   position: absolute;
   bottom: 50px;
   left: -50px;
-  top: 30px;
+  top: 26px;
   height: 4px;
   width: 10rem;
   background-color: #FFFFFF;
@@ -450,6 +499,9 @@ li .primary-nav--active::after {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -467,13 +519,13 @@ li .primary-nav--active::after {
 
 @media screen and (min-width: 768px) {
   .logo__container {
-    padding: 30px 0 0;
+    padding-bottom: 2.18rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   li .primary-nav--active::after {
-    bottom: 30px;
+    top: 43px;
   }
 }
 

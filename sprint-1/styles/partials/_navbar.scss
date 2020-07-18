@@ -55,12 +55,13 @@ li {
         text-align: center;
         position: relative;
         &--active {
+            // border-bottom: 0.2rem solid $nav-active-color;
             &::after {
                 content:'';
                 position: absolute;
                 bottom: 50px;
                 left:-50px;
-                top: 30px;
+                top: 26px;
                 height: 4px;
                 width: 10rem;
                 background-color: $nav-active-color;
@@ -85,6 +86,7 @@ header {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            align-items: center;
         }
     }
 
@@ -101,7 +103,8 @@ nav {
 .logo {
     @include tablet {
         &__container {
-            padding: 30px 0 0;
+            // padding: 30px 0 0;
+            padding-bottom: 2.18rem;
         }
     }
 }
@@ -112,7 +115,7 @@ li {
         .primary-nav {
             &--active {
                 &::after {
-                bottom: 30px;
+                top: 43px;
                 }
             }
         }

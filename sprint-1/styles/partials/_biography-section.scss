@@ -30,11 +30,14 @@
         margin-top: 1.20rem;
         h4 {
             color: $global-text-color;
-            font-size: 13px;
+            font-size: 0.81rem;
             margin: 0 0 2rem;
         }
         &--small {
-            font-size: 12px;
+            font-size: 0.75rem;
+        }
+        &--extra-margin {
+            margin: 0;
         }    
     }
 }
@@ -47,7 +50,7 @@
     &__title {
         h4 {
             color: $global-text-color;
-            font-size: 14px; 
+            font-size: 0.87rem; 
             height: 100%;
             margin-top: 0.5rem;
             margin-bottom: 1.5rem;
@@ -59,7 +62,7 @@
         flex-direction: column;
     }
     &__paragraph {
-        font-size: 12px;
+        font-size: 0.87rem;
         margin-top: 0;
         margin-bottom: 1.5rem;
         &--extra-margin {
@@ -70,6 +73,12 @@
 
 // TABLET STYLING
 
+.biography {
+    @include tablet {
+        padding: 0 1.5rem;
+    }
+}
+
 .header {
     @include tablet {
         &__title {
@@ -77,8 +86,8 @@
             padding: 3rem 0 2rem;
         }
         &__image {
-            width: 45rem;
-            height: 22.62rem;
+            min-width: 0.93vw;
+            min-height: 22.62rem;
             img {
                 width: 100%;
                 height: 100%;
@@ -93,12 +102,37 @@
                 margin: 1rem 0 2rem;
             }
         }
+        &__author {
+            margin-bottom: 2rem;
+            h4 {
+                margin: 0;
+                font-size: 1rem;
+                font-family: 'Avenir-Regular';
+                font-weight: bold;
+            } 
+        }
     }
 }
 
 .article {
     @include tablet {
-        
+        &__title {
+            h4 {
+                color: $global-text-color;
+                font-size: 1.5rem;
+                font-family: 'Avenir-Bold';
+            }
+        }
+        &__wrap {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &__paragraph {
+            width: 47.5%;
+            &--extra-margin {
+                margin-left: 1.5rem;
+            }
+        }
     }
 }
 
@@ -110,3 +144,63 @@
     }
 }
 
+//DESKTOP STYLING
+
+.biography {
+    @include desktop {
+        padding: 0 11.25rem;
+    }
+}
+
+.header {
+    @include desktop {
+        &__title {
+            padding: 3rem 0;
+        }
+        &__image {
+            min-width: 62vw;
+            min-height: 31.13vw;
+            padding-left: 5.75rem;
+        }
+        &__quote {
+            padding-left: 5.75rem;
+            padding-right: 10rem;
+            margin: 0;
+            h4 {
+                padding: 0;
+                margin: 0;
+                margin-top: 3rem;
+            }
+        }
+        &__author {
+            margin: 2.5rem 0 3.5rem;
+            h4 {
+                margin: 0;
+                font-size: 1.5rem;
+            } 
+        }
+    }
+}
+
+.article {
+    @include desktop {
+        &__container {
+            padding: 0 5.75rem;
+        }
+        &__title {
+            h4 {
+                margin: 0;
+                margin-bottom: 2rem;
+            }
+        }
+        &__paragraph {
+            min-width: 0.29vw;
+            font-size: 0.87rem;
+            line-height: 1.37rem ;
+            &--extra-margin {
+                margin-left: 2.5rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

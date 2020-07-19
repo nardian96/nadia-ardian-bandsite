@@ -384,6 +384,36 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .header__title {
+    font-size: 2.25rem;
+    padding: 3rem 0 2rem;
+  }
+  .header__image {
+    width: 45rem;
+    height: 22.62rem;
+  }
+  .header__image img {
+    width: 100%;
+    height: 100%;
+  }
+  .header__quote h4 {
+    line-height: 2rem;
+    color: #323232;
+    font-size: 1.5rem;
+    font-family: 'Avenir-Bold';
+    margin: 1rem 0 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .light-font {
+    font-size: 12px;
+    font-family: 'Avenir-Regular';
+    font-weight: lighter;
+  }
+}
+
 .gallery {
   background-color: #FAFAFA;
   min-width: 100%;

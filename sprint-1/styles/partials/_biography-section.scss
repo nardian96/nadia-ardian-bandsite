@@ -96,6 +96,12 @@
     }
 }
 
+.article {
+    @include tablet {
+        
+    }
+}
+
 .light-font {
     @include tablet {
         font-size: 12px;
@@ -103,3 +109,4 @@
         font-weight: lighter;
     }
 }
+

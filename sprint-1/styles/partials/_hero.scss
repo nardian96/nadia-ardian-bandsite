@@ -8,27 +8,28 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-
+    
     &__container {
-        margin: 0 16px;
+        margin: 0 1rem;
     }
 
     &__title {
         color: $hero-text-color;
+        padding-bottom: 1rem;
         width: 70%;
+        h1 {
+            font-family: 'Avenir-Demi';
+            font-size: 0.5rem;
+            line-height: 2rem;
+        }        
     }
 }
 
-h1 {
-    font-size: 24px;
-}
-
-
-.images {
-    width: 288px;
-    height: 145px;
-    margin: 16px 16px;
-}
+// .images {
+//     width: 288px;
+//     height: 145px;
+//     margin: 16px 16px;
+// }
 
 // TABLET STYLING
 
@@ -39,30 +40,40 @@ h1 {
             margin: 0 1.5rem;
         }
         &__title {
-            margin: 0;
+            margin: 0;    
         }
     }
- }
+}
 
- h1 {
+.title {
     @include tablet {
-        font-size: 60px;
-    }
- }
+        &__text {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
+    }    
+}
+
  // DESKTOP STYLING
 
  .hero {
     @include desktop {
-        height: 670px;
+        height: 41.87rem;
         &__container {
             width: 50%;
             margin: 0 11.25rem;
         }
+        &__title {
+            height: 15rem;
+        }
     }
  }
 
- h1 {
-    @include tablet {
-        @include desktop
-    }
- }
+ .title {
+    @include desktop {
+        &__text {
+            font-size: 3.7rem;
+            line-height:5.5rem;
+        }
+    }    
+}

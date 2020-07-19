@@ -30,11 +30,14 @@
         margin-top: 1.20rem;
         h4 {
             color: $global-text-color;
-            font-size: 0.81rem;
-            margin: 0 0 2rem;
+            font-family: 'Avenir-Demi';
+            font-size: 0.95rem;
+            margin: 0 0 1.5rem;
+            line-height: 1.37rem;
         }
         &--small {
-            font-size: 0.75rem;
+            font-family: 'Avenir-Regular';
+            font-size: 0.5rem;
         }
         &--extra-margin {
             margin: 0;
@@ -49,11 +52,12 @@
     }
     &__title {
         h4 {
+            font-family: 'Avenir-Demi';
             color: $global-text-color;
-            font-size: 0.87rem; 
+            font-size: 1.05rem; 
             height: 100%;
             margin-top: 0.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
     }
     &__wrap {
@@ -62,9 +66,10 @@
         flex-direction: column;
     }
     &__paragraph {
-        font-size: 0.87rem;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
         margin-top: 0;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
         &--extra-margin {
             margin-bottom: 2.5rem;
         }
@@ -164,19 +169,22 @@
         }
         &__quote {
             padding-left: 5.75rem;
-            padding-right: 10rem;
+            padding-right: 9rem;
             margin: 0;
             h4 {
                 padding: 0;
                 margin: 0;
                 margin-top: 3rem;
+                font-size: 1.5rem;
+                letter-spacing: 0.05rem;
             }
         }
         &__author {
             margin: 2.5rem 0 3.5rem;
             h4 {
                 margin: 0;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+                font-family: 'Avenir-Demi';
             } 
         }
     }
@@ -185,18 +193,23 @@
 .article {
     @include desktop {
         &__container {
-            padding: 0 5.75rem;
+            padding: 0 0 5rem 6.25rem;
+
         }
         &__title {
             h4 {
                 margin: 0;
                 margin-bottom: 2rem;
+                font-size: 1.5rem;
             }
+        }
+        &__wrap {
+            justify-content: space-between;
         }
         &__paragraph {
             min-width: 0.29vw;
-            font-size: 0.87rem;
-            line-height: 1.37rem ;
+            font-size: 1rem;
+            line-height: 1.4rem ;
             &--extra-margin {
                 margin-left: 2.5rem;
                 margin-bottom: 3rem;

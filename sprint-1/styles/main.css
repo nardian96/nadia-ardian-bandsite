@@ -107,7 +107,7 @@ header {
 
 .header__logo {
   width: 7.5rem;
-  min-height: 0.20rem;
+  min-height: 0.2rem;
   padding-top: 0.7rem;
 }
 
@@ -141,11 +141,23 @@ header {
 
 .primary-nav {
   width: 100%;
-  font-family: "Avenir-Demi";
-  color: #FFFFFF;
+  font-family: "Avenir-Regular";
+  font-size: 0.87rem;
+  color: #E1E1E1;
   text-decoration: none;
   text-align: center;
   position: relative;
+}
+
+.primary-nav--not-active:hover {
+  color: darkgoldenrod;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.primary-nav--active {
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 .primary-nav--active::after {
@@ -153,8 +165,8 @@ header {
   position: absolute;
   bottom: 50px;
   left: -50px;
-  top: 26px;
-  height: 4px;
+  top: 21px;
+  height: 5px;
   width: 10rem;
   background-color: #FFFFFF;
 }
@@ -198,7 +210,9 @@ header {
 
 @media screen and (min-width: 768px) {
   .primary-nav--active::after {
-    top: 43px;
+    top: 40px;
+    left: -10px;
+    width: 5.5rem;
   }
 }
 
@@ -211,24 +225,24 @@ header {
 @media screen and (min-width: 1440px) {
   .header__container {
     width: 35.75rem;
-    padding-left: 11.25rem;
+    padding-left: 11.2rem;
   }
   .header__navbar {
     width: 13.5rem;
-    padding-left: 3.5rem;
+    padding-left: 6rem;
   }
   .header__navbar li {
-    width: 5rem;
+    width: 5.5rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .primary-nav--left-margin {
-    margin-left: 3.5rem;
+    margin-left: 6rem;
   }
   .primary-nav--active::after {
     width: 5rem;
-    left: 0px;
+    left: -5px;
   }
 }
 
@@ -247,22 +261,19 @@ header {
 }
 
 .hero__container {
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 
 .hero__title {
   color: #FFFFFF;
+  padding-bottom: 1rem;
   width: 70%;
 }
 
-h1 {
-  font-size: 24px;
-}
-
-.images {
-  width: 288px;
-  height: 145px;
-  margin: 16px 16px;
+.hero__title h1 {
+  font-family: 'Avenir-Demi';
+  font-size: 0.5rem;
+  line-height: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -278,18 +289,29 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
-  h1 {
-    font-size: 60px;
+  .title__text {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .hero {
-    height: 670px;
+    height: 41.87rem;
   }
   .hero__container {
     width: 50%;
     margin: 0 11.25rem;
+  }
+  .hero__title {
+    height: 15rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title__text {
+    font-size: 3.7rem;
+    line-height: 5.5rem;
   }
 }
 
@@ -336,12 +358,15 @@ h1 {
 
 .header__quote h4 {
   color: #323232;
-  font-size: 0.81rem;
-  margin: 0 0 2rem;
+  font-family: 'Avenir-Demi';
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.37rem;
 }
 
 .header__quote--small {
-  font-size: 0.75rem;
+  font-family: 'Avenir-Regular';
+  font-size: 0.5rem;
 }
 
 .header__quote--extra-margin {
@@ -359,11 +384,12 @@ h1 {
 }
 
 .article__title h4 {
+  font-family: 'Avenir-Demi';
   color: #323232;
-  font-size: 0.87rem;
+  font-size: 1.05rem;
   height: 100%;
   margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .article__wrap {
@@ -379,9 +405,10 @@ h1 {
 }
 
 .article__paragraph {
-  font-size: 0.87rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .article__paragraph--extra-margin {
@@ -472,35 +499,44 @@ h1 {
   }
   .header__quote {
     padding-left: 5.75rem;
-    padding-right: 10rem;
+    padding-right: 9rem;
     margin: 0;
   }
   .header__quote h4 {
     padding: 0;
     margin: 0;
     margin-top: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
   }
   .header__author {
     margin: 2.5rem 0 3.5rem;
   }
   .header__author h4 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-family: 'Avenir-Demi';
   }
 }
 
 @media screen and (min-width: 1440px) {
   .article__container {
-    padding: 0 5.75rem;
+    padding: 0 0 5rem 6.25rem;
   }
   .article__title h4 {
     margin: 0;
     margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  .article__wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .article__paragraph {
     min-width: 0.29vw;
-    font-size: 0.87rem;
-    line-height: 1.37rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
   .article__paragraph--extra-margin {
     margin-left: 2.5rem;

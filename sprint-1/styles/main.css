@@ -591,17 +591,22 @@ footer {
   margin: 0;
 }
 
+.white-text--extra-margin {
+  margin-top: 2rem;
+}
+
 .footer__title {
   min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .footer__title h1 {
   color: #FFFFFF;
-  font-size: 24px;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .footer__icons {
@@ -610,10 +615,11 @@ footer {
   display: flex;
   min-width: 10rem;
   height: 20px;
+  padding-left: 0.5rem;
 }
 
 .footer__contact {
-  margin: 2rem 0;
+  margin: 1.5rem 0 2rem;
   min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,7 +639,7 @@ footer {
 }
 
 .icons__image {
-  min-width: 100%;
+  width: 80%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -652,7 +658,7 @@ footer {
 }
 
 .contact__item {
-  min-width: 80%;
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -665,7 +671,8 @@ footer {
 
 .contact__item h4 {
   color: #FFFFFF;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
 }
 
 .contact__item--light {
@@ -674,6 +681,10 @@ footer {
 
 .contact__item--margin-top {
   margin-top: 1rem;
+}
+
+.logo__image {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -685,6 +696,7 @@ footer {
 @media screen and (min-width: 768px) {
   .footer__header {
     width: 100%;
+    padding-top: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -700,8 +712,9 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -710,13 +723,14 @@ footer {
     min-width: 15.5rem;
   }
   .footer__title h1 {
-    font-size: 36px;
+    font-size: 2.1rem;
   }
   .footer__logo {
     min-width: 7.5rem;
-    min-height: 0.88rem;
+    height: 1.5rem;
   }
   .footer__contact {
+    margin-top: 1rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -731,11 +745,9 @@ footer {
 
 @media screen and (min-width: 768px) {
   .logo__image {
-    width: 100%;
-    height: 0.88rem;
-    background-image: url(../assets/logo/Logo-bandsite.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: inline-block;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -744,7 +756,10 @@ footer {
     min-width: 30%;
   }
   .contact__item h4 {
-    font-size: 14px;
+    font-size: 0.87rem;
+  }
+  .contact__item h4--margin-top {
+    margin-top: 0;
   }
 }
 
@@ -766,6 +781,7 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 0;
   }
   .footer__subheader {
     width: 30rem;
@@ -790,6 +806,9 @@ footer {
     min-height: 1.5rem;
   }
   .footer__contact {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     min-width: 50%;
     margin: 3.5rem 0;
   }
@@ -797,14 +816,20 @@ footer {
 
 @media screen and (min-width: 1440px) {
   .icons__image-wrap {
-    min-width: 4rem;
-    height: 100%;
+    min-width: 3.5rem;
+    min-height: 100%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .logo__image {
     height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact__item {
+    min-width: 25%;
   }
 }
 /*# sourceMappingURL=main.css.map */

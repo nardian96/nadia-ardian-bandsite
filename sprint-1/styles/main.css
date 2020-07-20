@@ -165,10 +165,21 @@ header {
   position: absolute;
   bottom: 50px;
   left: -50px;
-  top: 21px;
+  top: 20px;
   height: 5px;
   width: 10rem;
   background-color: #FFFFFF;
+}
+
+.primary-nav--active:hover {
+  color: darkgoldenrod;
+  font-size: medium;
+}
+
+.primary-nav--active:hover::after {
+  background-color: darkgoldenrod;
+  top: 33px;
+  left: -5px;
 }
 
 @media screen and (min-width: 768px) {

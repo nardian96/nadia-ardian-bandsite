@@ -427,7 +427,7 @@ header {
     padding: 3rem 0 2rem;
   }
   .header__image {
-    min-width: 0.93vw;
+    min-width: 0.90vw;
     min-height: 22.62rem;
   }
   .header__image img {
@@ -496,6 +496,7 @@ header {
     min-width: 62vw;
     min-height: 31.13vw;
     padding-left: 5.75rem;
+    padding-right: 5rem;
   }
   .header__quote {
     padding-left: 5.75rem;
@@ -521,7 +522,8 @@ header {
 
 @media screen and (min-width: 1440px) {
   .article__container {
-    padding: 0 0 5rem 6.25rem;
+    padding-left: 6.25rem;
+    padding-right: 5.8rem;
   }
   .article__title h4 {
     margin: 0;

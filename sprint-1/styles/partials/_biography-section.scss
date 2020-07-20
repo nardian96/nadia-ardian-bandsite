@@ -91,7 +91,7 @@
             padding: 3rem 0 2rem;
         }
         &__image {
-            min-width: 0.93vw;
+            min-width: 0.90vw;
             min-height: 22.62rem;
             img {
                 width: 100%;
@@ -166,6 +166,7 @@
             min-width: 62vw;
             min-height: 31.13vw;
             padding-left: 5.75rem;
+            padding-right: 5rem;
         }
         &__quote {
             padding-left: 5.75rem;
@@ -193,7 +194,8 @@
 .article {
     @include desktop {
         &__container {
-            padding: 0 0 5rem 6.25rem;
+            padding-left: 6.25rem;
+            padding-right: 5.8rem;
 
         }
         &__title {

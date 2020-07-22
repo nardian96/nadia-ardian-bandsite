@@ -1,0 +1,225 @@
+// MOBILE STYLING
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.white-text {
+    color: $footer-text-color;
+    margin: 0;
+    &--extra-margin {
+        margin-top: 2rem;
+    }
+}
+
+
+.footer {
+    &__title {
+        min-width: 100%;
+        display: flex;
+        padding-top: 1.5rem;
+        h1 {
+            color: $footer-text-color;
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+    }
+    &__icons {
+        display: flex;
+        min-width: 10rem;
+        height: 20px;
+        padding-left: 0.5rem;
+
+    }
+    &__contact {
+        margin: 1.5rem 0 2rem;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.icons {
+    &__image-wrap {
+        min-width: 3.33rem;
+        height: 100%;
+    }
+    &__image {
+        width: 80%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &--instagram {
+            background-image: url(/sprint-1/assets/icons/svg/Icon-instagram.svg);
+        }
+        &--facebook {
+            background-image: url(/sprint-1/assets/icons/svg/Icon-facebook.svg);
+        }
+        &--twitter {
+            background-image: url(/sprint-1/assets/icons/svg/Icon-twitter.svg);
+        } 
+
+    }
+}
+
+.contact {
+    &__item {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.62rem;
+        h4 {
+            color: $footer-text-color;
+            font-size: 0.9rem;
+            line-height: 1.25rem;
+        }
+        &--light {
+            font-weight: lighter;
+        }
+        &--margin-top {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.logo {
+    &__image {
+        display: none;
+    }
+}
+
+// TABLET STYLING
+
+footer {
+    @include tablet {
+        padding: 0 1.5rem;
+    }
+}
+
+.footer {
+    @include tablet {
+        &__header {
+            width: 100%;
+            padding-top: 0.5rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        &__subheader {
+            width: 26.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        &__title {
+            min-width: 15.5rem;
+            h1 {
+                font-size: 2.1rem;
+            }
+        }
+        &__logo {
+            min-width: 7.5rem;
+            height: 1.5rem;
+        }
+        &__contact {
+            margin-top: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+.logo {
+    @include tablet {
+        &__image {
+            display: inline-block;
+            object-fit: cover;
+        }
+    }
+}
+
+.contact {
+    @include tablet {
+        &__item {
+            min-width: 30%;
+            h4 {
+                font-size: 0.87rem;
+                &--margin-top {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP STYLING
+
+footer {
+    @include desktop {
+        padding: 0 11.25rem;
+    }
+}
+
+.footer {
+    @include desktop {
+        &__header {
+            width: 100%;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 0;
+        }
+        &__subheader {
+            width: 30rem;
+            justify-content: space-between;
+        }
+        &__title {
+            padding-top: 3rem;
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+        &__icons {
+            display: flex;
+            min-width: 10rem;
+            height: 20px;
+        }
+        &__logo {
+            min-height: 1.5rem;
+        }
+        &__contact {
+            justify-content: flex-start;
+            min-width: 50%;
+            margin: 3.5rem 0;
+        }
+    }
+}
+
+.icons {
+    @include desktop {
+        &__image-wrap {
+            min-width: 3.5rem;
+            min-height: 100%;
+        }
+    }
+}
+
+.logo {
+    @include desktop {
+        &__image {
+            height: 1.5rem;
+        }
+    }
+}
+
+.contact {
+    @include desktop {
+        &__item {
+            min-width: 25%;
+        }
+    }
+}        

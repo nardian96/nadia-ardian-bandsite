@@ -1,0 +1,108 @@
+.hero-shows {
+    width: 100%;
+    min-height: 29.5rem;
+    background-image: url(/sprint-2/assets/images/felipe-portella-h6gTtqBZUxc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    // align-items: center;
+    
+    &__container {
+        margin: 4rem 1rem;
+    }
+
+    &__title {
+        color: $hero-text-color;
+        margin: 0 0 4rem;
+        width: 100%;
+        h1 {
+            font-family: 'Avenir-Demi';
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }        
+    }
+
+    &__iframe {
+        width: 100%;
+        height: 166px;
+        &__text {
+            font-size: 10px;
+            color: #cccccc;
+            line-break: anywhere;
+            word-break: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+            font-weight: 100;
+        }
+        &__link {
+            color: #cccccc; 
+            text-decoration: none;
+        }
+       
+
+
+    }
+}
+
+.title-shows {
+    &__text {
+        font-size: 2.1rem;
+        line-height: 3rem;
+    }
+    &__subtext {
+        font-weight: bold;
+        margin: 0 0 1rem;
+        color: $hero-text-color;
+    }
+}
+
+
+
+// TABLET STYLING
+
+.hero-shows {
+    @include tablet {
+        height: 400px;
+        &__container {
+            margin: 0 1.5rem;
+        }
+        &__title {
+            margin: 0;    
+        }
+    }
+}
+
+.title-shows {
+    @include tablet {
+        &__text {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
+    }    
+}
+
+ // DESKTOP STYLING
+
+ .hero-shows {
+    @include desktop {
+        height: 41.87rem;
+        &__container {
+            width: 50%;
+            margin: 0 11.25rem;
+        }
+        &__title {
+            height: 15rem;
+        }
+    }
+ }
+
+ .title-shows {
+    @include desktop {
+        &__text {
+            font-size: 3.7rem;
+            line-height:5.5rem;
+        }
+    }    
+}

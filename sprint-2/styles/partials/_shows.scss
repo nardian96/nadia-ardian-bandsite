@@ -1,5 +1,6 @@
 //MOBILE STYLING
 .shows {
+    display: flex;
     &__title {
 
     }
@@ -11,5 +12,19 @@
 .ticket {
     &__wrap {
 
+    }
+}
+
+//TABLET STYLING
+.shows {
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        &__title {
+            width: 100%;
+        }
+        &__ticket-container {
+            width: 100%;
+        }
     }
 }

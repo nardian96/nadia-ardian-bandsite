@@ -425,6 +425,30 @@ header {
   }
 }
 
+.shows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .shows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shows__title {
+    width: 100%;
+  }
+  .shows__ticket-container {
+    width: 100%;
+  }
+}
+
 .biography {
   padding: 0 1rem;
   display: -webkit-box;

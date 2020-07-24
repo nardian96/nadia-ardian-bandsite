@@ -1,4 +1,4 @@
-
+//DESIRED HTML STRUCTURE
 /* <div class='ticket__wrap'>
 <ul class='ticket__item'>
     <li></li>
@@ -10,7 +10,6 @@
  
 function createShowElement(show) {
     let showsContainer = document.querySelector('.shows__container');
-    // showsContainer.innerHTML = ""; //Might need to do this for comment section in order to prevent duplicating comments
     let ticketWrap = document.createElement('div');
     let ticketItem = document.createElement('ul');
     let date = document.createElement('li');

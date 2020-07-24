@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'Avenir-Bold';
-  src: url(/sprint-1/assets/fonts/AvenirNextLTPro-Bold.woff2) format("woff2"), url(/sprint-1/assets/fonts/AvenirNextLTPro-Bold.woff) format("woff");
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Bold.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Avenir-Demi';
-  src: url(/sprint-1/assets/fonts/AvenirNextLTPro-Demi.woff2) format("woff2"), url(/sprint-1/assets/fonts/AvenirNextLTPro-Demi.woff) format("woff");
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Demi.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Avenir-Regular';
-  src: url(/sprint-1/assets/fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(/sprint-1/assets/fonts/AvenirNextLTPro-Regular.woff) format("woff");
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.woff2) format("woff2"), url(../assets/fonts/AvenirNextLTPro-Regular.woff) format("woff");
 }
 
 html,
@@ -429,6 +429,48 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ticket__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ticket__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ticket__data--date::before {
+  content: "DATE";
+  color: grey;
+  font-weight: bold;
+}
+
+.ticket__data--venue::before {
+  content: "VENUE";
+  color: grey;
+  font-weight: bold;
+}
+
+.ticket__data--location::before {
+  content: "LOCATION";
+  color: grey;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -444,8 +486,65 @@ header {
   .shows__title {
     width: 100%;
   }
-  .shows__ticket-container {
+  .shows__container {
     width: 100%;
+  }
+  .ticket__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ticket__wrap:first-child .ticket__data--date::before,
+  .ticket__wrap:first-child .ticket__data--venue::before,
+  .ticket__wrap:first-child .ticket__data--location::before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ticket__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .ticket__data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ticket__data--date::before {
+    display: none;
+  }
+  .ticket__data--venue::before {
+    display: none;
+  }
+  .ticket__data--location::before {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .shows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .shows__title {
+    width: 30%;
+  }
+  .shows__container {
+    width: 70%;
   }
 }
 
@@ -553,9 +652,6 @@ header {
   .biography {
     padding: 0 1.5rem;
   }
-}
-
-@media screen and (min-width: 768px) {
   .header__title {
     font-size: 2.25rem;
     padding: 3rem 0 2rem;
@@ -584,9 +680,6 @@ header {
     font-family: 'Avenir-Regular';
     font-weight: bold;
   }
-}
-
-@media screen and (min-width: 768px) {
   .article__title h4 {
     color: #323232;
     font-size: 1.5rem;
@@ -606,9 +699,6 @@ header {
   .article__paragraph--extra-margin {
     margin-left: 1.5rem;
   }
-}
-
-@media screen and (min-width: 768px) {
   .light-font {
     font-size: 12px;
     font-family: 'Avenir-Regular';
@@ -620,9 +710,6 @@ header {
   .biography {
     padding: 0 11.25rem;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .header__title {
     padding: 3rem 0;
   }
@@ -652,9 +739,6 @@ header {
     font-size: 1.2rem;
     font-family: 'Avenir-Demi';
   }
-}
-
-@media screen and (min-width: 1440px) {
   .article__container {
     padding-left: 6.25rem;
     padding-right: 5.8rem;
@@ -747,6 +831,12 @@ header {
   }
 }
 
+.user__image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -818,15 +908,15 @@ footer {
 }
 
 .icons__image--instagram {
-  background-image: url(/sprint-1/assets/icons/svg/Icon-instagram.svg);
+  background-image: url(../assets/icons/svg/Icon-instagram.svg);
 }
 
 .icons__image--facebook {
-  background-image: url(/sprint-1/assets/icons/svg/Icon-facebook.svg);
+  background-image: url(../assets/icons/svg/Icon-facebook.svg);
 }
 
 .icons__image--twitter {
-  background-image: url(/sprint-1/assets/icons/svg/Icon-twitter.svg);
+  background-image: url(../assets/icons/svg/Icon-twitter.svg);
 }
 
 .contact__item {
@@ -863,9 +953,6 @@ footer {
   footer {
     padding: 0 1.5rem;
   }
-}
-
-@media screen and (min-width: 768px) {
   .footer__header {
     width: 100%;
     padding-top: 0.5rem;
@@ -913,17 +1000,11 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-}
-
-@media screen and (min-width: 768px) {
   .logo__image {
     display: inline-block;
     -o-object-fit: cover;
        object-fit: cover;
   }
-}
-
-@media screen and (min-width: 768px) {
   .contact__item {
     min-width: 30%;
   }
@@ -939,9 +1020,6 @@ footer {
   footer {
     padding: 0 11.25rem;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .footer__header {
     width: 100%;
     display: -webkit-box;
@@ -984,22 +1062,13 @@ footer {
     min-width: 50%;
     margin: 3.5rem 0;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .icons__image-wrap {
     min-width: 3.5rem;
     min-height: 100%;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .logo__image {
     height: 1.5rem;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .contact__item {
     min-width: 25%;
   }

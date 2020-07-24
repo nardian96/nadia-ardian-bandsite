@@ -9,6 +9,8 @@
 </div>  */
  
 function createShowElement(show) {
+    let showsContainer = document.querySelector('.shows__container');
+    // showsContainer.innerHTML = ""; //Might need to do this for comment section in order to prevent duplicating comments
     let ticketWrap = document.createElement('div');
     let ticketItem = document.createElement('ul');
     let date = document.createElement('li');
@@ -18,9 +20,9 @@ function createShowElement(show) {
 
     ticketWrap.classList.add('ticket__wrap');
     ticketItem.classList.add('ticket__item');
-    date.classList.add('ticket__data');
-    venue.classList.add('ticket__data');
-    loc.classList.add('ticket__data');
+    date.classList.add('ticket__data', 'ticket__data--date');
+    venue.classList.add('ticket__data', 'ticket__data--venue');
+    loc.classList.add('ticket__data', 'ticket__data--location');
 
     date.innerHTML = show.date;
     venue.innerHTML = show.venue;
@@ -31,7 +33,7 @@ function createShowElement(show) {
     ticketItem.appendChild(venue);
     ticketItem.appendChild(loc);
     ticketWrap.appendChild(ticketItem);
-    document.querySelector('.shows__ticket-container').appendChild(ticketWrap);
+    showsContainer.appendChild(ticketWrap);
     ticketWrap.appendChild(btn);
 }
 

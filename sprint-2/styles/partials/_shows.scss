@@ -1,10 +1,11 @@
 //MOBILE STYLING
 .shows {
     display: flex;
+    flex-direction: column;
     &__title {
 
     }
-    &__ticket-container {
+    &__container {
 
     }
 }
@@ -13,18 +14,101 @@
     &__wrap {
 
     }
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        &--date {
+            &::before {
+                content: "DATE";
+                color: grey;
+                font-weight: bold;
+            }
+        }
+        &--venue {
+            &::before {
+                content: "VENUE";
+                color: grey;
+                font-weight: bold;
+            }
+        }
+        &--location {
+            &::before {
+                content: "LOCATION";
+                color: grey;
+                font-weight: bold;
+            }
+
+        } 
+    }
 }
 
 //TABLET STYLING
-.shows {
-    @include tablet {
+
+@include tablet {
+    .shows {
         display: flex;
         flex-direction: column;
         &__title {
             width: 100%;
         }
-        &__ticket-container {
+        &__container {
             width: 100%;
+        }
+    }
+    
+    .ticket {
+        &__wrap {
+            display: flex;
+            &:first-child {
+                //repeating class name to avoid unnecessary overnesting. Ask Jim for info.  
+                .ticket__data--date::before, 
+                .ticket__data--venue::before, 
+                .ticket__data--location::before {
+                    display: flex;
+                }
+            }    
+        }
+        &__item {
+            display: flex;
+            flex-direction: row;
+        }
+        &__data {
+            display: flex;
+            flex-direction: column;
+            &--date {
+                &::before {
+                    display: none;
+                }
+            }
+            &--venue {
+                &::before {
+                    display: none;
+                }
+            }
+            &--location {
+                &::before {
+                    display: none;
+                }
+            }    
+        } 
+    }
+}
+
+// DESKTOP STYLING
+
+@include desktop {
+    .shows {
+        display: flex;
+        flex-direction: row ;
+        &__title {
+            width: 30%;
+        }
+        &__container {
+            width: 70%;
         }
     }
 }

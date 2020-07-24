@@ -53,13 +53,13 @@ footer {
         background-repeat: no-repeat;
         background-size: contain;
         &--instagram {
-            background-image: url(/sprint-1/assets/icons/svg/Icon-instagram.svg);
+            background-image: url(../assets/icons/svg/Icon-instagram.svg);
         }
         &--facebook {
-            background-image: url(/sprint-1/assets/icons/svg/Icon-facebook.svg);
+            background-image: url(../assets/icons/svg/Icon-facebook.svg);
         }
         &--twitter {
-            background-image: url(/sprint-1/assets/icons/svg/Icon-twitter.svg);
+            background-image: url(../assets/icons/svg/Icon-twitter.svg);
         } 
 
     }
@@ -93,14 +93,12 @@ footer {
 
 // TABLET STYLING
 
-footer {
-    @include tablet {
+@include tablet {
+    footer {
         padding: 0 1.5rem;
     }
-}
-
-.footer {
-    @include tablet {
+    
+    .footer {
         &__header {
             width: 100%;
             padding-top: 0.5rem;
@@ -131,19 +129,15 @@ footer {
             justify-content: space-between;
         }
     }
-}
-
-.logo {
-    @include tablet {
+    
+    .logo {
         &__image {
             display: inline-block;
             object-fit: cover;
         }
     }
-}
-
-.contact {
-    @include tablet {
+    
+    .contact {
         &__item {
             min-width: 30%;
             h4 {
@@ -156,16 +150,15 @@ footer {
     }
 }
 
+
 // DESKTOP STYLING
 
-footer {
-    @include desktop {
+@include desktop {
+    footer {
         padding: 0 11.25rem;
     }
-}
-
-.footer {
-    @include desktop {
+    
+    .footer {
         &__header {
             width: 100%;
             display: flex;
@@ -197,29 +190,23 @@ footer {
             margin: 3.5rem 0;
         }
     }
-}
-
-.icons {
-    @include desktop {
+    
+    .icons {
         &__image-wrap {
             min-width: 3.5rem;
             min-height: 100%;
         }
     }
-}
-
-.logo {
-    @include desktop {
+    
+    .logo {
         &__image {
             height: 1.5rem;
         }
     }
-}
-
-.contact {
-    @include desktop {
+    
+    .contact {
         &__item {
             min-width: 25%;
         }
-    }
-}        
+    }        
+}

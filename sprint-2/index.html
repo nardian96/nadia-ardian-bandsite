@@ -121,28 +121,23 @@
     </section>
 
     <section class="comment">
-        <div class="comment__container-input"> 
+        <div class="comment__container"> 
             <div class="comment__title"> 
                 <h1>Join The Conversation</h1>
             </div>
-            <div class="comment__input"> 
-                <div class="input__user"> <!--picture and name input section-->
-                    <img class="user__image"  src="./assets/images/Mohan-muruge.jpg" alt="">
-                    <div class="user__name">
-                        <p>Your Name</p>
+            <div class="form__container"> <!--comment__input--> 
+                <img class="image" src="./assets/images/Mohan-muruge.jpg" alt="">
+                <form class="form-message">
+                    <div class="form-message__container form-message__container--name">
+                        <input type="text" name="name" class="form-message__name" placeholder="Your Name">
                     </div>
-                </div>
-                <div class="input__comment">
-                    <div class="comment__box">
-                        <p>Add a new comment</p>
+                    <div class="form-message__container form-message__container--comment">
+                        <textarea name="comment" class="form-message__comment" placeholder="Add a new comment"></textarea>
                     </div>
-                    <button class="comment__button" type="button">COMMENT</button>
-                </div>
-            <div class="comment__data"> <!--Actual comment section-->
-
+                    <button type ="submit" class="form-message__submit">COMMENT</button>
+                </form>
             </div>
-
-            </div>
+            <div class="comment__data"></div>
         </div>
     </section>
     

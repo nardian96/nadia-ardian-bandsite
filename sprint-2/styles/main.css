@@ -826,18 +826,15 @@ header {
           justify-content: space-evenly;
 }
 
-.input__user {
+.form__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.input__comment {
+.form-message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,51 +842,52 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
-.user__image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.form-message__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.user__name {
-  width: 70%;
-}
-
-.user__name::before {
+.form-message__container--name::before {
   content: "NAME";
   color: grey;
 }
 
-.user__name p {
+.form-message__container--comment::before {
+  content: "COMMENT";
+  color: grey;
+}
+
+.form-message__name {
+  width: 70%;
   border: 3px solid black;
   border-radius: 10px;
   margin: 0;
   padding: 1rem 0 1rem;
 }
 
-.comment__box {
+.form-message__comment {
   width: 70%;
-}
-
-.comment__box::before {
-  content: "COMMENT";
-  color: grey;
-}
-
-.comment__box p {
   border: 3px solid grey;
   border-radius: 10px;
   margin: 0;
   padding: 1rem 0 1rem;
 }
 
-.comment__button {
+.form-message__submit {
   width: 70%;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 footer {

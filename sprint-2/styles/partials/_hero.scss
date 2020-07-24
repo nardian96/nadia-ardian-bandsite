@@ -27,8 +27,8 @@
 
 // TABLET STYLING
 
-.hero {
-    @include tablet {
+@include tablet {
+    .hero {
         height: 400px;
         &__container {
             margin: 0 1.5rem;
@@ -37,21 +37,19 @@
             margin: 0;    
         }
     }
-}
-
-.title {
-    @include tablet {
+    
+    .title {
         &__text {
             font-size: 3.75rem;
             line-height: 4.25rem;
         }
-    }    
+    }
 }
 
  // DESKTOP STYLING
 
- .hero {
-    @include desktop {
+ @include desktop {
+    .hero {
         height: 41.87rem;
         &__container {
             width: 50%;
@@ -60,14 +58,12 @@
         &__title {
             height: 15rem;
         }
-    }
- }
-
- .title {
-    @include desktop {
+     }
+    
+     .title {
         &__text {
             font-size: 3.7rem;
             line-height:5.5rem;
         }
-    }    
-}
+    }
+ }

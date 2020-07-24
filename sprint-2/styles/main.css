@@ -189,9 +189,6 @@ header {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-}
-
-@media screen and (min-width: 768px) {
   .header__container {
     width: 30rem;
     display: -webkit-box;
@@ -217,9 +214,6 @@ header {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-}
-
-@media screen and (min-width: 768px) {
   .primary-nav--active::after {
     top: 40px;
     left: -10px;
@@ -231,9 +225,6 @@ header {
   header {
     min-width: 1440px;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .header__container {
     width: 35.75rem;
     padding-left: 11.2rem;
@@ -245,9 +236,6 @@ header {
   .header__navbar li {
     width: 5.5rem;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .primary-nav--left-margin {
     margin-left: 6rem;
   }
@@ -297,9 +285,6 @@ header {
   .hero__title {
     margin: 0;
   }
-}
-
-@media screen and (min-width: 768px) {
   .title__text {
     font-size: 3.75rem;
     line-height: 4.25rem;
@@ -317,9 +302,6 @@ header {
   .hero__title {
     height: 15rem;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .title__text {
     font-size: 3.7rem;
     line-height: 5.5rem;
@@ -396,9 +378,6 @@ header {
   .hero-shows__title {
     margin: 0;
   }
-}
-
-@media screen and (min-width: 768px) {
   .title-shows__text {
     font-size: 3.75rem;
     line-height: 4.25rem;
@@ -416,9 +395,6 @@ header {
   .hero-shows__title {
     height: 15rem;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .title-shows__text {
     font-size: 3.7rem;
     line-height: 5.5rem;

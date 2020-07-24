@@ -1,3 +1,5 @@
+// MOBILE STYLING
+
 .hero-shows {
     width: 100%;
     min-height: 29.5rem;
@@ -40,9 +42,6 @@
             color: #cccccc; 
             text-decoration: none;
         }
-       
-
-
     }
 }
 
@@ -58,12 +57,10 @@
     }
 }
 
-
-
 // TABLET STYLING
 
-.hero-shows {
-    @include tablet {
+@include tablet {
+    .hero-shows {
         height: 400px;
         &__container {
             margin: 0 1.5rem;
@@ -72,21 +69,19 @@
             margin: 0;    
         }
     }
-}
-
-.title-shows {
-    @include tablet {
+    
+    .title-shows {
         &__text {
             font-size: 3.75rem;
             line-height: 4.25rem;
         }
-    }    
+    }
 }
 
  // DESKTOP STYLING
 
- .hero-shows {
-    @include desktop {
+ @include desktop {
+    .hero-shows {
         height: 41.87rem;
         &__container {
             width: 50%;
@@ -96,13 +91,11 @@
             height: 15rem;
         }
     }
- }
-
- .title-shows {
-    @include desktop {
+    
+    .title-shows {
         &__text {
             font-size: 3.7rem;
             line-height:5.5rem;
         }
-    }    
+    }
 }

@@ -27,8 +27,8 @@
 
 //TABLET STYLING
 
-.gallery {
-    @include tablet {
+@include tablet {
+    .gallery {
         padding: 0 1.5rem;
         h1 {
             font-size: 36px;
@@ -42,14 +42,14 @@
                 margin-bottom: 1.5rem;
             }
         }
-
     }
 }
 
+
 //DESKTOP STYLING
-    
-.gallery {
-    @include desktop {
+
+@include desktop {
+    .gallery {
         padding: 0 11.25rem;
         h1 {
             padding: 3rem 0 4rem;

@@ -83,15 +83,13 @@ header {
 
 // TABLET STYLING
 
-header {
-    @include tablet {
+@include tablet {
+    header {
         min-width: 768px;
         justify-content: flex-start;
     }
-}
-
-.header {
-    @include tablet {
+    
+    .header {
         &__container {
             width: 30rem;
             display: flex;
@@ -108,10 +106,8 @@ header {
             align-items: flex-end;
         }
     }
-}
-
-.primary-nav {
-    @include tablet {
+    
+    .primary-nav {
         &--active {
             &::after {
             top: 40px;
@@ -124,14 +120,12 @@ header {
 
 // DESKTOP STYLING
 
-header {
-    @include desktop {
+@include desktop {
+    header {
         min-width: 1440px;
     }
-}
-
-.header {
-    @include desktop {
+    
+    .header {
         &__container {
             width: 35.75rem;
             padding-left: 11.2rem;
@@ -144,11 +138,9 @@ header {
                 width: 5.5rem;
             }
         }
-    }    
-}
-
-.primary-nav {
-    @include desktop {
+    }
+    
+    .primary-nav {
         &--left-margin {
             margin-left: 6rem;
         }
@@ -160,4 +152,3 @@ header {
         }
     }
 }
-

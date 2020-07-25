@@ -21,7 +21,7 @@ function createShowElement(show) {
     ticketItem.classList.add('ticket__item');
     date.classList.add('ticket__data', 'ticket__data--date');
     venue.classList.add('ticket__data', 'ticket__data--venue');
-    loc.classList.add('ticket__data', 'ticket__data--location');
+    loc.classList.add('ticket__data', 'ticket__data--location', 'adjusted-padding');
 
     date.innerHTML = show.date;
     venue.innerHTML = show.venue;

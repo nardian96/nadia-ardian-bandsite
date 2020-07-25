@@ -1,9 +1,13 @@
 //MOBILE STYLING
 .shows {
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     &__title {
-
+        h1 {
+            margin: 2rem 0 0.5rem;
+        }
     }
     &__container {
 
@@ -12,38 +16,63 @@
 
 .ticket {
     &__wrap {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #E1E1E1;
 
     }
     &__item {
         display: flex;
         flex-direction: column;
+        &:first-child {
+            font-family: 'Avenir Bold';
+        }
     }
     &__data {
         display: flex;
         flex-direction: column;
+        padding-bottom: 1.5rem;
+        color: black;
+        font-weight: 13px;
         &--date {
             &::before {
                 content: "DATE";
-                color: grey;
-                font-weight: bold;
+                @include body-header;
+                padding-top: 1rem;
+                // color: grey;
+                // font-weight: bold;
+                // padding-bottom: 1rem;  
             }
         }
         &--venue {
             &::before {
                 content: "VENUE";
-                color: grey;
-                font-weight: bold;
+                @include body-header;
+                // color: grey;
+                // font-weight: bold;
+                // padding-bottom: 1rem;
             }
         }
         &--location {
             &::before {
                 content: "LOCATION";
-                color: grey;
-                font-weight: bold;
+                @include body-header;
+                // color: grey;
+                // font-weight: bold;
+                // padding-bottom: 1rem;
             }
 
         } 
     }
+}
+
+.adjusted-padding {
+    padding-bottom: 16px;
+}
+
+button {
+    @include button;
+    width: 100% ;
+    margin: 0;
 }
 
 //TABLET STYLING
@@ -64,7 +93,7 @@
         &__wrap {
             display: flex;
             &:first-child {
-                //repeating class name to avoid unnecessary overnesting. Ask Jim for info.  
+                //repeating class name to avoid unnecessary over-nesting. Ask Jim for info.  
                 .ticket__data--date::before, 
                 .ticket__data--venue::before, 
                 .ticket__data--location::before {

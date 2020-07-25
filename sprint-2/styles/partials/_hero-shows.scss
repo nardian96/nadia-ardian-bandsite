@@ -1,32 +1,30 @@
 // MOBILE STYLING
 
 .hero-shows {
-    width: 100%;
+    min-width: 20rem;
     min-height: 29.5rem;
-    background-image: url(/sprint-2/assets/images/joshua-fuller-ta7rN3NcWyM-unsplash.jpg);
+    background-image: url(../assets/images/joshua-fuller-ta7rN3NcWyM-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: left;
     display: flex;
-    // align-items: center;
     
     &__container {
-        margin: 4rem 1rem;
+        width: 100%;
+        padding: 4rem 1rem 2.5rem;
+        // margin: 4rem 1rem 2.5rem;
     }
 
     &__title {
-        color: $hero-text-color;
-        margin: 0 0 4rem;
-        width: 100%;
-        h1 {
-            font-family: 'Avenir-Demi';
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }        
+        width: 18rem;
+        // min-width: 100%;
+        margin: 0 0 3.75rem;
     }
 
     &__iframe {
-        width: 100%;
-        height: 166px;
+        // width: 100%;
+        width: 18rem;
+        height: 6.25rem;
         &__text {
             font-size: 10px;
             color: #cccccc;
@@ -45,12 +43,23 @@
     }
 }
 
+.iframe {
+    width: 100%;
+    height: 100%;
+}
+
 .title-shows {
     &__text {
+        min-width: 100%;
+        color: $hero-text-color;
         font-size: 2.1rem;
         line-height: 3rem;
+        font-family: 'Avenir-Bold';
+        margin: 0;
     }
+    
     &__subtext {
+        font-family: 'Avenir-Demi';
         font-weight: bold;
         margin: 0 0 1rem;
         color: $hero-text-color;
@@ -61,19 +70,51 @@
 
 @include tablet {
     .hero-shows {
-        height: 400px;
+        min-width: 48rem;
+        min-height: 41.87rem;
         &__container {
-            margin: 0 1.5rem;
+            width: 100%;
+            margin: 0;
+            padding: 0 1.5rem;
         }
         &__title {
-            margin: 0;    
+            margin: 0;  
+            width: 35rem;
+            min-width: 0;
+            padding-bottom: 3rem; 
+        }
+        &__iframe {
+            width: 26.37rem;
+            height: 140px;
+            &__text {
+                font-size: 10px;
+                color: #cccccc;
+                line-break: anywhere;
+                word-break: normal;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+                font-weight: 100;
+            }
+            &__link {
+                color: #cccccc; 
+                text-decoration: none;
+            }
         }
     }
     
     .title-shows {
         &__text {
+            width: 100%;
             font-size: 3.75rem;
             line-height: 4.25rem;
+        }
+        &__subtext {
+            margin: 6rem 0 3rem;
+            font-family: 'Avenir-Bold';
+            font-size: 1.5rem;
+
         }
     }
 }
@@ -82,13 +123,28 @@
 
  @include desktop {
     .hero-shows {
-        height: 41.87rem;
+        min-width: 90rem;
+        min-height: 41.87rem;
         &__container {
-            width: 50%;
+            width: 100%;
+            height: 27.31rem;
             margin: 0 11.25rem;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
         }
         &__title {
-            height: 15rem;
+            min-height: 15rem;
+            width: 34.5rem;
+            margin: 0;
+            padding-bottom: 0;
+        }
+        &__iframe {
+            padding-left: 4rem;
+            padding-bottom: 2rem;
+            width: 27.25rem;
+            height: 9.12rem;
         }
     }
     
@@ -96,6 +152,9 @@
         &__text {
             font-size: 3.7rem;
             line-height:5.5rem;
+        }
+        &__subtext {
+            width: 19.37rem;
         }
     }
 }

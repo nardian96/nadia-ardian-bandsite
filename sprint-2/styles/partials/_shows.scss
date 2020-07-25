@@ -153,13 +153,17 @@ button {
 
 @include desktop {
     .shows {
+        padding: 0 11.25rem;
         display: flex;
         flex-direction: row ;
         &__title {
             width: 30%;
         }
         &__container {
-            width: 70%;
+            width: 50.25rem;
         }
+    }
+    .adjusted-padding {
+        padding-top: 1rem;
     }
 }

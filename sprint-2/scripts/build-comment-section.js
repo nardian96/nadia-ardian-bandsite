@@ -1,7 +1,9 @@
 //DESIRED HTML STRUCTURE
 /* <div class="comment__data">
     <div class="comment__item">
-        <div class="user__image"></div>
+        <div class="image__container">
+            <div class="image__item"></div>
+        </div>
         <div class="item__content">
             <div class="item__header"></div>
                 <div class="header__name"></div>
@@ -32,6 +34,7 @@ let comments = [
 function createCommentElement(comment) {
     let commentContainer = document.querySelector('.comment__data');
     let commentItem = document.createElement('div');
+    let imageContainer = document.createElement('div');
     let image = document.createElement('div');
     let commentContent = document.createElement('div');
     let contentHeader = document.createElement('div');
@@ -40,7 +43,8 @@ function createCommentElement(comment) {
     let content = document.createElement('div');
 
     commentItem.classList.add('comment__item');
-    image.classList.add('image');
+    imageContainer.classList.add('image__container');
+    image.classList.add('image__item');
     commentContent.classList.add('item__content');
     contentHeader.classList.add('item__header');
     name.classList.add('header__name');
@@ -55,7 +59,8 @@ function createCommentElement(comment) {
     contentHeader.appendChild(date);
     commentContent.appendChild(contentHeader);
     commentContent.appendChild(content);
-    commentItem.appendChild(image);
+    imageContainer.appendChild(image);
+    commentItem.appendChild(imageContainer);
     commentItem.appendChild(commentContent);
     commentContainer.appendChild(commentItem);
 }
@@ -64,9 +69,6 @@ const sortedComments = dateSort(comments);
         sortedComments.forEach(function(item) {
             createCommentElement(item);
         })
-// comments.forEach(function(item) {
-//     createCommentElement(item);
-// });
 
 // SORT BY DATE 
 function dateSort(array) {
@@ -77,8 +79,7 @@ function dateSort(array) {
 function dateFormat(date) {
     const months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
-    const dateFormat = `${months[date.getMonth()]} / 
-    ${date.getDay()} / ${date.getFullYear()}`;
+    const dateFormat = `${months[date.getMonth()]}/${date.getDay()}/${date.getFullYear()}`;
 
     return dateFormat;
 }

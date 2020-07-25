@@ -1,25 +1,88 @@
 .comment {
+    padding-right: 1rem;
+    padding-left: 1rem;
     &__container {
         min-width: 100%;
         min-height: 100%;
-        padding-bottom: 2rem;
+        padding-bottom: 2.5rem;
     }
     &__title {
-
+        margin: 2rem 0 2.5rem 0;
+        h1 {
+            margin: 0;
+        }
     }
     &__input {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
+    &__data {
+        margin-top: 2rem;
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
+
+    }
+    &__item {
+        width: 100%;
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
+        display: flex;
+        justify-content: space-between;
+        align-item: baseline;
+        padding: 1.5rem 0 1.5rem;
+    }
 }
+
+.item {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+    }
+    &__content {
+        width: 80%;
+        font-family: 'Avenir-Regular';
+        line-height: 1.20rem;
+        font-size: 0.87rem;
+    }
+}
+
+.header {
+    &__name {
+        font-weight: bold;
+    }
+    &__date {
+        color: #AFAFAF;
+    }
+}
+
+.image {
+    &__container {
+        width: 15%;
+    }
+    &__item {
+        width: 50px;
+        height: 50px ;
+        border-radius: 50%;
+        background-color: #AFAFAF; 
+        margin-top: 15px;
+        &--form {
+            object-fit: cover;
+            object-position: left center;
+        }
+    }
+}
+
+
 
 .form {
     &__container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     &__message {
+
 
     }
 }
@@ -34,39 +97,47 @@
             &::before {
                 content: "NAME";
                 color: grey;
+                font-size: 0.7rem;
+                font-weight: bold;
+                padding-bottom: 3px;
             }
         }
         &--comment {
             &::before {
                 content: "COMMENT";
                 color: grey;
+                margin-top: 1.5rem;
+                font-size: 0.7rem;
+                font-weight: bold;
+                padding-bottom: 3px;
             }
         }
     }
     &__name {
-        width: 70%;
-        border: 3px solid black;
-        border-radius: 10px;
+        width: 14rem;
+        border: 2.5px solid black;
+        border-radius: 5px;
         margin: 0;
-        padding: 1rem 0 1rem;
+        padding: 1rem 1rem;
     }
     &__comment {
-        width: 70%;
-        border: 3px solid grey;
-        border-radius: 10px;
+        width: 14rem;
+        border: 2.5px solid grey;
+        border-radius: 5px;
         margin: 0;
-        padding: 1rem 0 1rem;
+        padding: 1rem 1rem;
+        color: black;
     }
 
     &__submit {
-        width: 70%;
+        width: 14rem;
+        color: $global-button-text-color;
+        background-color: $global-button-color;
+        font-weight: bold;
+        margin-top: 1rem;
+        padding: 1rem 0;
+        border-radius: 5px;
+        border: none;
     }
 }
 
-.image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: left center;
-}

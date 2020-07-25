@@ -48,7 +48,7 @@ h4 {
     font-family: 'Avenir-Regular';
 }
 
-p {
+p, input, textarea, button, ::before {
     font-family: 'Avenir-Regular';
     font-weight: lighter;
     color: $paragraph-text-color;

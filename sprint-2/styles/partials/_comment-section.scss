@@ -3,6 +3,7 @@
 .comment {
     padding-right: 1rem;
     padding-left: 1rem;
+
     &__container {
         min-width: 100%;
         min-height: 100%;
@@ -78,11 +79,12 @@
 
 .form {
     &__container {
+        // min-width: 18rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     &__message {
-
+        min-width: 100%;
 
     }
 }
@@ -91,7 +93,9 @@
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    // width: 100%;
     &__container {
+        min-width: 14rem;
         display: flex;
         flex-direction: column;
         &--name {
@@ -115,14 +119,14 @@
         }
     }
     &__name {
-        width: 14rem;
+        min-width: 14rem;
         border: 2.5px solid black;
         border-radius: 5px;
         margin: 0;
         padding: 1rem 1rem;
     }
     &__comment {
-        width: 14rem;
+        min-width: 14rem;
         border: 2.5px solid grey;
         border-radius: 5px;
         margin: 0;
@@ -131,7 +135,7 @@
     }
 
     &__submit {
-        width: 14rem;
+        min-width: 14rem;
         color: $global-button-text-color;
         background-color: $global-button-color;
         font-weight: bold;
@@ -184,7 +188,7 @@
             width: 10rem;
             height: 3rem;
             position: relative;
-            left: 280px;
+            left: 220px;
             margin-top: 1.5rem;
         }
     }
@@ -223,4 +227,20 @@
             padding-left: 10px;
         }
     }
+}
+
+//DESKTOP STYLING
+
+@include desktop {
+    .comment {
+        padding: 0;
+        &__container {
+            padding: 0 11.25rem;
+        }
+        &__data {
+            padding: 0 17.25rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
 }

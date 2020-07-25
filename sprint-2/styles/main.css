@@ -908,9 +908,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form__message {
+  min-width: 100%;
 }
 
 .form-message {
@@ -925,6 +928,7 @@ header {
 }
 
 .form-message__container {
+  min-width: 14rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -952,7 +956,7 @@ header {
 }
 
 .form-message__name {
-  width: 14rem;
+  min-width: 14rem;
   border: 2.5px solid black;
   border-radius: 5px;
   margin: 0;
@@ -960,7 +964,7 @@ header {
 }
 
 .form-message__comment {
-  width: 14rem;
+  min-width: 14rem;
   border: 2.5px solid grey;
   border-radius: 5px;
   margin: 0;
@@ -969,7 +973,7 @@ header {
 }
 
 .form-message__submit {
-  width: 14rem;
+  min-width: 14rem;
   color: #FAFAFA;
   background-color: #323232;
   font-weight: bold;
@@ -1017,7 +1021,7 @@ header {
     width: 10rem;
     height: 3rem;
     position: relative;
-    left: 280px;
+    left: 220px;
     margin-top: 1.5rem;
   }
   .image__container {
@@ -1049,6 +1053,19 @@ header {
   }
   .header__date {
     padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .comment {
+    padding: 0;
+  }
+  .comment__container {
+    padding: 0 11.25rem;
+  }
+  .comment__data {
+    padding: 0 17.25rem;
+    margin-bottom: 2.5rem;
   }
 }
 

@@ -450,7 +450,7 @@ header {
 }
 
 .ticket__data--date::before {
-  content: "DATE";
+  content: "DATES";
   font-family: 'Avenir-Demi';
   color: grey;
   font-size: 0.81rem;
@@ -484,7 +484,8 @@ header {
 button {
   color: #FAFAFA;
   background-color: #323232;
-  font-weight: bold;
+  font-family: 'Avenir-Demi';
+  font-size: 13px;
   margin-top: 1rem;
   padding: 1rem 0;
   border-radius: 5px;
@@ -495,6 +496,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .shows {
+    padding: 0 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -505,23 +507,39 @@ button {
   }
   .shows__title {
     width: 100%;
+    margin-top: 3rem;
+  }
+  .shows__title h1 {
+    margin: 0;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .shows__container {
     width: 100%;
   }
   .ticket__wrap {
+    min-height: 3.12rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 1rem 0;
   }
   .ticket__wrap:first-child .ticket__data--date::before,
   .ticket__wrap:first-child .ticket__data--venue::before,
   .ticket__wrap:first-child .ticket__data--location::before {
+    padding-bottom: 2.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   .ticket__item {
+    width: 31rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -529,6 +547,12 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .ticket__data {
     display: -webkit-box;
@@ -538,15 +562,21 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
   }
   .ticket__data--date::before {
     display: none;
+    padding-top: 0;
   }
   .ticket__data--venue::before {
     display: none;
   }
   .ticket__data--location::before {
     display: none;
+  }
+  button {
+    width: 10rem;
+    height: 3rem;
   }
 }
 
@@ -1019,7 +1049,8 @@ button {
 .form-message__submit {
   color: #FAFAFA;
   background-color: #323232;
-  font-weight: bold;
+  font-family: 'Avenir-Demi';
+  font-size: 13px;
   margin-top: 1rem;
   padding: 1rem 0;
   border-radius: 5px;

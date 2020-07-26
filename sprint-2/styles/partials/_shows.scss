@@ -1,16 +1,15 @@
 //MOBILE STYLING
 .shows {
+    min-width: 20rem;
     padding: 0 1rem;
     margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     &__title {
+        width: 100%;
         h1 {
             margin: 2rem 0 0.5rem;
         }
-    }
-    &__container {
-
     }
 }
 
@@ -71,7 +70,7 @@
 
 button {
     @include button;
-    width: 100% ;
+    width: 18rem;
     margin: 0;
 }
 
@@ -79,6 +78,7 @@ button {
 
 @include tablet {
     .shows {
+        min-width: 48rem;
         padding: 0 1.5rem;
         display: flex;
         flex-direction: column;
@@ -98,6 +98,7 @@ button {
     
     .ticket {
         &__wrap {
+            width: 100%;
             min-height: 3.12rem;
             display: flex;
             justify-content: space-between;
@@ -116,6 +117,7 @@ button {
         &__item {
             width: 31rem;
             display: flex;
+            // flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-end;

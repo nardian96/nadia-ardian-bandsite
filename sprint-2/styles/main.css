@@ -165,7 +165,7 @@ header {
   position: absolute;
   bottom: 50px;
   left: -50px;
-  top: 20px;
+  top: 22px;
   height: 5px;
   width: 10rem;
   background-color: #FFFFFF;
@@ -178,8 +178,8 @@ header {
 
 .primary-nav--active:hover::after {
   background-color: darkgoldenrod;
-  top: 33px;
-  left: -5px;
+  top: 23px;
+  left: -55px;
 }
 
 @media screen and (min-width: 768px) {
@@ -215,9 +215,16 @@ header {
             align-items: flex-end;
   }
   .primary-nav--active::after {
-    top: 40px;
+    top: 42px;
     left: -10px;
     width: 5.5rem;
+  }
+  .primary-nav--active-shows::after {
+    left: -20px;
+  }
+  .primary-nav--active-shows:hover::after {
+    background-color: darkgoldenrod;
+    left: -15px;
   }
 }
 
@@ -243,10 +250,17 @@ header {
     width: 5rem;
     left: -5px;
   }
+  .primary-nav--active-shows::after {
+    left: -20px;
+  }
+  .primary-nav--active-shows:hover::after {
+    background-color: darkgoldenrod;
+    left: -15px;
+  }
 }
 
 .hero {
-  width: 100%;
+  min-width: 20rem;
   height: 183px;
   background-image: url(../assets/images/concert-1.jpg);
   background-size: cover;
@@ -447,7 +461,7 @@ header {
   }
   .hero-shows__iframe {
     padding-left: 4rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     width: 27.25rem;
     height: 9.12rem;
   }
@@ -461,6 +475,7 @@ header {
 }
 
 .shows {
+  min-width: 20rem;
   padding: 0 1rem;
   margin-bottom: 2.5rem;
   display: -webkit-box;
@@ -470,6 +485,10 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.shows__title {
+  width: 100%;
 }
 
 .shows__title h1 {
@@ -549,12 +568,13 @@ button {
   padding: 1rem 0;
   border-radius: 5px;
   border: none;
-  width: 100%;
+  width: 18rem;
   margin: 0;
 }
 
 @media screen and (min-width: 768px) {
   .shows {
+    min-width: 48rem;
     padding: 0 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -577,6 +597,7 @@ button {
     width: 100%;
   }
   .ticket__wrap {
+    width: 100%;
     min-height: 3.12rem;
     display: -webkit-box;
     display: -ms-flexbox;

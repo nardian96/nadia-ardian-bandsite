@@ -63,19 +63,19 @@ header {
             position: absolute;
             bottom: 50px;
             left:-50px;
-            top: 20px;
+            top: 22px;
             height: 5px;
             width: 10rem;
             background-color: $nav-active-color;
         }
         &:hover {
-                color: darkgoldenrod;
-                font-size: medium;
-                &::after {
-                    background-color: darkgoldenrod;
-                    top: 33px;
-                    left: -5px;
-                }
+            color: darkgoldenrod;
+            font-size: medium;
+            &::after {
+                background-color: darkgoldenrod;
+                top: 23px;
+                left: -55px;
+            }
         } 
     }
 
@@ -110,9 +110,20 @@ header {
     .primary-nav {
         &--active {
             &::after {
-            top: 40px;
+            top: 42px;
             left: -10px;
             width: 5.5rem;
+            }
+        }
+        &--active-shows {
+            &::after {
+            left: -20px;
+            }
+            &:hover {
+                &::after {
+                    background-color: darkgoldenrod;
+                    left: -15px;
+                }
             }
         }
     }
@@ -148,6 +159,17 @@ header {
             &::after {
                 width: 5rem;
                 left: -5px;
+            }
+        }
+        &--active-shows {
+            &::after {
+            left: -20px;
+            }
+            &:hover {
+                &::after {
+                    background-color: darkgoldenrod;
+                    left: -15px;
+                }
             }
         }
     }

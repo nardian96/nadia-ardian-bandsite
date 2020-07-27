@@ -114,15 +114,23 @@ header {
             left: -10px;
             width: 5.5rem;
             }
+            &:hover {
+                &::after {
+                    background-color: darkgoldenrod;
+                    left: -7px;
+                }
+            }
         }
         &--active-shows {
             &::after {
+            top: 42px;
             left: -20px;
+            width: 5.5rem;
             }
             &:hover {
                 &::after {
                     background-color: darkgoldenrod;
-                    left: -15px;
+                    left: -20px;
                 }
             }
         }

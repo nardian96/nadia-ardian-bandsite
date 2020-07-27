@@ -1,24 +1,14 @@
-//DESIRED HTML STRUCTURE
-/* <div class='ticket__wrap'>
-<ul class='ticket__item'>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
-<button></button>
-</div>  */
- 
 function createShowElement(show) {
-    let showsContainer = document.querySelector('.shows__container');
-    let ticketWrap = document.createElement('div');
-    let ticketItem = document.createElement('ul');
-    let date = document.createElement('li');
-    let venue = document.createElement('li');
-    let loc = document.createElement('li');
-    let btn = document.createElement('button');
+    const showsContainer = document.querySelector('.shows__container');
+    const ticketWrap = document.createElement('div');
+    const ticketItem = document.createElement('ul');
+    const date = document.createElement('li');
+    const venue = document.createElement('li');
+    const loc = document.createElement('li');
+    const btn = document.createElement('button');
 
     ticketWrap.classList.add('ticket__wrap');
-    ticketItem.classList.add('ticket__item');
+    ticketItem.classList.add('ticket__item', 'ticket__item:first-child');
     date.classList.add('ticket__data', 'ticket__data--date');
     venue.classList.add('ticket__data', 'ticket__data--venue');
     loc.classList.add('ticket__data', 'ticket__data--location', 'adjusted-padding');

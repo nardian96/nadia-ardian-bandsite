@@ -1,18 +1,3 @@
-//DESIRED HTML STRUCTURE
-/* <div class="comment__data">
-    <div class="comment__item">
-        <div class="image__container">
-            <div class="image__item"></div>
-        </div>
-        <div class="item__content">
-            <div class="item__header"></div>
-                <div class="header__name"></div>
-                <div class="header__date"></div>
-            <div class="item__body"></div>
-        </div>
-    </div>
-</div>  */
-
 let comments = [
     {
         name: 'Michael Lyons', 
@@ -32,12 +17,12 @@ let comments = [
 ]
 
 function createCommentElement(comment) {
-    let commentContainer = document.querySelector('.comment__data');
-    let commentItem = document.createElement('div');
-    let imageContainer = document.createElement('div');
-    let image = document.createElement('div');
-    let commentContent = document.createElement('div');
-    let contentHeader = document.createElement('div');
+    const commentContainer = document.querySelector('.comment__data');
+    const commentItem = document.createElement('div');
+    const imageContainer = document.createElement('div');
+    const image = document.createElement('div');
+    const commentContent = document.createElement('div');
+    const contentHeader = document.createElement('div');
     let name = document.createElement('div');
     let date = document.createElement('div');
     let content = document.createElement('div');
@@ -65,28 +50,28 @@ function createCommentElement(comment) {
     commentContainer.appendChild(commentItem);
 }
 
-const sortedComments = dateSort(comments);
+let sortedComments = dateSort(comments);
         sortedComments.forEach(function(item) {
             createCommentElement(item);
         })
 
 // SORT BY DATE 
 function dateSort(array) {
-    const sortedArray = array.slice().sort((a, b) => b.date - a.date);
+    let sortedArray = array.slice().sort((a, b) => b.date - a.date);
     return sortedArray;
 }
 
 function dateFormat(date) {
-    const months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+    let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
-    const dateFormat = `${months[date.getMonth()]}/${date.getDay()}/${date.getFullYear()}`;
+    let dateFormat = `${months[date.getMonth()]}/${date.getDate()}/${date.getFullYear()}`;
 
     return dateFormat;
 }
 
 
-let form = document.querySelector('.form-message');
-let commentContainer = document.querySelector('.comment__data');
+const form = document.querySelector('.form-message');
+const commentContainer = document.querySelector('.comment__data');
 
 
 form.addEventListener("submit", function(event) {
@@ -103,31 +88,10 @@ form.addEventListener("submit", function(event) {
         });
         form.reset();
         commentContainer.innerHTML = "";
-        // const sortedArray = comments.sort(function(a, b) {
-        //     return b.date - a.date;
-        // });
-        const sortedComments = dateSort(comments);
+        let sortedComments = dateSort(comments);
         sortedComments.forEach(function(item) {
             createCommentElement(item);
         })
     }
 });  
-
-
-// form.addEventListener("submit", createNewComment => {
-//     event.preventDefault();
-//     let nameValue = event.target.name.value;
-//     let messageValue = event.target.comment.value;
-//     let dateValue = new Date();
-
-//     if (nameValue !== "" && messageValue !== "") {
-//         comments.push({
-//             name: nameValue,
-//             date: dateValue,
-//             content: messageValue
-//         });
-//         form.reset();
-//     }
-// });  
-
 

@@ -1,0 +1,69 @@
+// MOBILE STYLING
+
+.hero {
+    min-width: 20rem;
+    height: 183px;
+    background-image: url(../assets/images/concert-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    
+    &__container {
+        margin: 0 1rem;
+    }
+
+    &__title {
+        color: $hero-text-color;
+        padding-bottom: 1rem;
+        width: 70%;
+        h1 {
+            font-family: 'Avenir-Demi';
+            font-size: 0.5rem;
+            line-height: 2rem;
+        }        
+    }
+}
+
+// TABLET STYLING
+
+@include tablet {
+    .hero {
+        height: 400px;
+        &__container {
+            margin: 0 1.5rem;
+        }
+        &__title {
+            margin: 0;    
+        }
+    }
+    
+    .title {
+        &__text {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+        }
+    }
+}
+
+ // DESKTOP STYLING
+
+ @include desktop {
+    .hero {
+        height: 41.87rem;
+        &__container {
+            width: 50%;
+            margin: 0 11.25rem;
+        }
+        &__title {
+            height: 15rem;
+        }
+     }
+    
+     .title {
+        &__text {
+            font-size: 3.7rem;
+            line-height:5.5rem;
+        }
+    }
+ }

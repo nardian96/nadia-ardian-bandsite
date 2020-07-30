@@ -1,0 +1,184 @@
+// MOBILE STYLING
+
+header {
+    min-width: 320px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header {
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__logo {
+        width: 7.5rem;
+        min-height: 0.2rem;
+        padding-top: 0.7rem;
+        img {
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+    &__navbar {
+        display: flex;
+        align-items: flex-end;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                width: 10rem;
+                text-align: center;
+
+            }
+        }
+    }
+
+}
+
+.primary-nav {
+    width: 100%;
+    font-family: "Avenir-Regular";
+    font-size: 0.87rem;
+    color: $nav-text-color;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    &--not-active {
+        &:hover {
+            color: darkgoldenrod;
+            font-size: medium;
+            font-weight: bold;
+        }
+    }
+    &--active {
+        color: $nav-active-color;
+        font-weight: bold;
+        &::after {
+            content:'';
+            position: absolute;
+            bottom: 50px;
+            left:-50px;
+            top: 22px;
+            height: 5px;
+            width: 10rem;
+            background-color: $nav-active-color;
+        }
+        &:hover {
+            color: darkgoldenrod;
+            font-size: medium;
+            &::after {
+                background-color: darkgoldenrod;
+                top: 23px;
+                left: -55px;
+            }
+        } 
+    }
+
+}
+
+// TABLET STYLING
+
+@include tablet {
+    header {
+        min-width: 768px;
+        justify-content: flex-start;
+    }
+    
+    .header {
+        &__container {
+            width: 30rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &__logo {
+            padding-bottom: 0.8rem;
+        }
+        &__navbar {
+            width: 60%;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+    }
+    
+    .primary-nav {
+        &--active {
+            &::after {
+            top: 42px;
+            left: -10px;
+            width: 5.5rem;
+            }
+            &:hover {
+                &::after {
+                    background-color: darkgoldenrod;
+                    left: -7px;
+                }
+            }
+        }
+        &--active-shows {
+            &::after {
+            top: 42px;
+            left: -20px;
+            width: 5.5rem;
+            }
+            &:hover {
+                &::after {
+                    background-color: darkgoldenrod;
+                    left: -20px;
+                }
+            }
+        }
+    }
+}
+
+// DESKTOP STYLING
+
+@include desktop {
+    header {
+        min-width: 1440px;
+    }
+    
+    .header {
+        &__container {
+            width: 35.75rem;
+            padding-left: 11.2rem;
+        }    
+
+        &__navbar {
+            width: 13.5rem;
+            padding-left: 6rem;
+            li {
+                width: 5.5rem;
+            }
+        }
+    }
+    
+    .primary-nav {
+        &--left-margin {
+            margin-left: 6rem;
+        }
+        &--active {
+            &::after {
+                width: 5rem;
+                left: -5px;
+            }
+        }
+        &--active-shows {
+            &::after {
+            left: -20px;
+            }
+            &:hover {
+                &::after {
+                    background-color: darkgoldenrod;
+                    left: -15px;
+                }
+            }
+        }
+    }
+}

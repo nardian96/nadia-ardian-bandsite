@@ -1,0 +1,169 @@
+//MOBILE STYLING
+.shows {
+    min-width: 20rem;
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    &__title {
+        width: 100%;
+        h1 {
+            margin: 2rem 0 0.5rem;
+        }
+    }
+}
+
+.ticket {
+    &__wrap {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #E1E1E1;
+
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &:first-child {
+            font-family: 'Avenir-Bold';
+        }
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+        text-align: left;
+        color: black;
+        font-size: 14px;
+        &--date {
+            &::before {
+                content: "DATES";
+                @include body-header;
+                padding-top: 1rem;
+            }
+        }
+        &--venue {
+            &::before {
+                content: "VENUE";
+                @include body-header;
+            }
+        }
+        &--location {
+            &::before {
+                content: "LOCATION";
+                @include body-header;
+            }
+        } 
+    }
+}
+
+.adjusted-padding {
+    padding-bottom: 16px;
+}
+
+button {
+    @include button;
+    width: 18rem;
+    margin: 0;
+}
+
+ul > li:first-child {
+    font-weight: bold;
+    font-size: 15px;
+} 
+
+//TABLET STYLING
+
+@include tablet {
+    .shows {
+        min-width: 48rem;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        &__title {
+            width: 100%;
+            margin-top: 3rem;
+            h1 {
+                margin: 0;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+        }
+        &__container {
+            width: 100%;
+        }
+    }
+    
+    .ticket {
+        &__wrap {
+            width: 100%;
+            min-height: 3.12rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 1rem 0;
+            &:first-child {
+                //repeating class name to avoid unnecessary over-nesting. Ask Jim for info.  
+                .ticket__data--date::before, 
+                .ticket__data--venue::before, 
+                .ticket__data--location::before {
+                    padding-bottom: 2.5rem;
+                    display: flex;
+                }
+            }    
+        }
+        
+        &__item {
+            min-width: 31rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        &__data {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 0;
+            &--date {
+                &::before {
+                    display: none;
+                    padding-top: 0;
+                }
+            }
+            &--venue {
+                &::before {
+                    display: none;
+                }
+            }
+            &--location {
+                &::before {
+                    display: none;
+                }
+            }    
+        } 
+    }
+
+    button {
+        width: 12rem;
+        height: 3rem;
+    }
+}
+
+// DESKTOP STYLING
+
+@include desktop {
+    .shows {
+        padding: 0 11.25rem;
+        display: flex;
+        flex-direction: row ;
+        &__title {
+            width: 30%;
+        }
+        &__container {
+            width: 50.25rem;
+        }
+    }
+    .adjusted-padding {
+        padding-top: 1rem;
+    }
+}

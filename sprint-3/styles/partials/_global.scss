@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+header {
+    background-color: $nav-background-color;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+}
+
+.hero {
+    width: 100%;
+}
+
+h1, h2, h4 {
+    color: $global-text-color;
+}
+
+h1 {
+    font-family: 'Avenir-Bold';
+}
+
+h2, h5 {
+    font-family: 'Avenir-Demi';
+}
+
+h4 {
+    font-family: 'Avenir-Regular';
+}
+
+p, input, li, textarea, button, ::before {
+    font-family: 'Avenir-Regular';
+    font-weight: lighter;
+    color: $paragraph-text-color;
+}
+
+footer {
+    min-width: 320px;
+    background-color: $footer-background-color;
+}

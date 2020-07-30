@@ -1,0 +1,65 @@
+//MOBILE STYLING
+
+.gallery {
+    background-color: $gallery-background-color;
+    min-width: 100%;
+    padding: 0 1rem;
+    h1 {
+        padding: 2rem 0 1.5rem;
+        margin: 0;
+    }
+    &__container {
+        min-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 1rem ;
+        div {
+            min-height: 8.15rem;
+            margin-bottom: 1rem;
+        
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }    
+    }    
+}
+
+//TABLET STYLING
+
+@include tablet {
+    .gallery {
+        padding: 0 1.5rem;
+        h1 {
+            font-size: 36px;
+        }
+        &__container {
+            padding-bottom: 1rem;
+            justify-content: space-between;
+            div {
+                width: 29.16vw;
+                height: 16.40vw;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+
+//DESKTOP STYLING
+
+@include desktop {
+    .gallery {
+        padding: 0 11.25rem;
+        h1 {
+            padding: 3rem 0 4rem;
+        }
+        &__container {
+            padding-bottom: 1rem;
+            div {
+                width: 23.8vw;
+                height: 13.35vw;
+            }
+        }
+    }
+}

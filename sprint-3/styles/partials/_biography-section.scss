@@ -1,0 +1,211 @@
+// MOBILE STYLING
+
+.biography {
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    &__header {
+        width: 100%;
+    }
+}
+
+.header {
+    &__title {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+        margin: 0;
+    }
+    &__image {
+        min-width: 90vw;
+        min-height: 8.15rem;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__quote {
+        line-height: 1.23rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.20rem;
+        h4 {
+            color: $global-text-color;
+            font-family: 'Avenir-Demi';
+            font-size: 0.95rem;
+            margin: 0 0 1.5rem;
+            line-height: 1.37rem;
+        }
+        &--small {
+            font-family: 'Avenir-Regular';
+            font-size: 0.5rem;
+        }
+        &--extra-margin {
+            margin: 0;
+        }    
+    }
+}
+
+.article {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        h4 {
+            font-family: 'Avenir-Demi';
+            color: $global-text-color;
+            font-size: 1.05rem; 
+            height: 100%;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    &__paragraph {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
+        &--extra-margin {
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+// TABLET STYLING
+
+@include tablet {
+    .biography {
+        padding: 0 1.5rem;
+    }
+    
+    .header {
+        &__title {
+            font-size: 2.25rem;
+            padding: 3rem 0 2rem;
+        }
+        &__image {
+            min-width: 0.90vw;
+            min-height: 22.62rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__quote {
+            h4 {
+                line-height: 2rem;
+                color: $global-text-color;
+                font-size: 1.5rem;
+                font-family: 'Avenir-Bold';
+                margin: 1rem 0 2rem;
+            }
+        }
+        &__author {
+            margin-bottom: 2rem;
+            h4 {
+                margin: 0;
+                font-size: 1rem;
+                font-family: 'Avenir-Regular';
+                font-weight: bold;
+            } 
+        }
+    }
+    
+    .article {
+        &__title {
+            h4 {
+                color: $global-text-color;
+                font-size: 1.5rem;
+                font-family: 'Avenir-Bold';
+            }
+        }
+        &__wrap {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &__paragraph {
+            width: 47.5%;
+            &--extra-margin {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+    
+    .light-font {
+        font-size: 12px;
+        font-family: 'Avenir-Regular';
+        font-weight: lighter;
+    }
+}
+
+//DESKTOP STYLING
+
+@include desktop {
+    .biography {
+        padding: 0 11.25rem;
+    }
+    
+    .header {
+        &__title {
+            padding: 3rem 0;
+        }
+        &__image {
+            min-width: 62vw;
+            min-height: 31.13vw;
+            padding-left: 5.75rem;
+            padding-right: 5rem;
+        }
+        &__quote {
+            padding-left: 5.75rem;
+            padding-right: 9rem;
+            margin: 0;
+            h4 {
+                padding: 0;
+                margin: 0;
+                margin-top: 3rem;
+                font-size: 1.5rem;
+                letter-spacing: 0.05rem;
+            }
+        }
+        &__author {
+            margin: 2.5rem 0 3.5rem;
+            h4 {
+                margin: 0;
+                font-size: 1.2rem;
+                font-family: 'Avenir-Demi';
+            } 
+        }
+    }
+    
+    .article {
+        &__container {
+            padding-left: 6.25rem;
+            padding-right: 5.8rem;
+
+        }
+        &__title {
+            h4 {
+                margin: 0;
+                margin-bottom: 2rem;
+                font-size: 1.5rem;
+            }
+        }
+        &__wrap {
+            justify-content: space-between;
+        }
+        &__paragraph {
+            min-width: 0.29vw;
+            font-size: 1rem;
+            line-height: 1.4rem ;
+            &--extra-margin {
+                margin-left: 2.5rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

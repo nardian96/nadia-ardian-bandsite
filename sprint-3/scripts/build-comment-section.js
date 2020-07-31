@@ -33,22 +33,11 @@ function createCommentElement(comment) {
     commentContainer.appendChild(commentItem);
 }
 
-// let sortedComments = dateSort(comments);
-//         sortedComments.forEach(function(item) {
-//             createCommentElement(item);
-//         })
-
-// SORT BY DATE 
+// SORT BY DATE
 // function dateSort(array) {
 //     let sortedArray = array.slice().sort((a, b) => b.date - a.date);
 //     return sortedArray;
 // }
-
-function dateSort(timestamp) {
-    let sortedArray = array.slice().sort((a, b) => b.date - a.date);
-    return sortedArray;
-}
-
 
 function dateFormat(timestamp) {
     let date = new Date(timestamp)
@@ -79,12 +68,12 @@ form.addEventListener("submit", function(event) {
                 comments = response.data
                 form.reset();
                 commentContainer.innerHTML = "";
-                let sortedComments = dateSort(comments);
+                let sortedComments = comments;
                 sortedComments.forEach(function(item) {
                     createCommentElement(item);
                 })
             })
         })
     }
-});  
+});
 

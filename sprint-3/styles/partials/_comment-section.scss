@@ -26,7 +26,6 @@
         border-bottom: 1px solid #E1E1E1;
     }
     &__item {
-        min-width: 20rem;
         border-top: 1px solid #E1E1E1;
         border-bottom: 1px solid #E1E1E1;
         display: flex;
@@ -81,10 +80,6 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-    }
-    &__message {
-        // width: 100%;
-
     }
 }
 

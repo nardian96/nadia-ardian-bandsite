@@ -1,6 +1,7 @@
+// FUNCTION TO CREATE DOM ELEMENTS FOR THE COMMENTS
 function createCommentElement(comment) {
     const commentContainer = document.querySelector('.comment__data');
-    const commentItem = document.createElement('div');
+    const commentItem = document.createElement('li');
     const imageContainer = document.createElement('div');
     const image = document.createElement('div');
     const commentContent = document.createElement('div');
@@ -32,7 +33,7 @@ function createCommentElement(comment) {
     commentContainer.appendChild(commentItem);
 }
 
-
+//FUNCTION TO FORMAT DATE 
 function dateFormat(timestamp) {
     let date = new Date(timestamp)
     let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
@@ -40,11 +41,36 @@ function dateFormat(timestamp) {
     return dateFormat;
 }
 
+// function dynamic(timestamp) {
+//     const earlyDate = new Date();
+//     const laterDate = new Date();
 
+//     const diffDate = earlyDate - laterDate;
+
+//     // console.log(diffDate)
+
+//     let date = new Date(timestamp)
+//     let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+//     if (diffDate > 1564810570) {
+//         return "More than 1 year ago"
+//     }
+//     else if (diffdate > 1595828170) {
+//         return "More than 1 week ago"
+//     }
+//     else if (diffdate > 1596346570) {
+//         return "More than 1 day ago"
+//     }
+//     else if (diffdate >  )
+
+//     let dateFormat = `${months[date.getMonth()]}/${date.getDate()}/${date.getFullYear()}`;
+//     return dateFormat;
+// } 
+
+
+
+//EVENT LISTENER
 const form = document.querySelector('.form-message');
 const commentContainer = document.querySelector('.comment__data');
-
-
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     let nameValue = event.target.name.value;
@@ -76,7 +102,6 @@ form.addEventListener("submit", function(event) {
                     createCommentElement(item);
                 })
             })
-            // })
         })
     }
 });

@@ -1,4 +1,4 @@
-//FETCHING DEFAULT COMMENTS DATA FROM WEB API 
+//GET DEFAULT COMMENTS DATA FROM WEB API 
 const apiRegister = 'https://project-1-api.herokuapp.com/register'
 let apiKey = 'b63ac6ba-bd53-4134-8589-1e26cf6b6b72'
 // const request = axios.get(apiRegister)
@@ -17,7 +17,6 @@ axios.get(apiComments)
             return b.timestamp - a.timestamp;
         })
     })
-    console.log(sorted)
     return sorted
 })
 .then((response) => {
@@ -35,7 +34,7 @@ function appendKey(url) {
     return apiURL
 }
 
-//FETCHING SHOWS DATA FROM WEB API
+//GET SHOWS DATA FROM WEB API
 const apiShows = appendKey('https://project-1-api.herokuapp.com/showdates')
 axios.get(apiShows) 
 .then(

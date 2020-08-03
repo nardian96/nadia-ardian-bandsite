@@ -1,6 +1,6 @@
 //FETCHING DEFAULT COMMENTS DATA FROM WEB API 
 const apiRegister = 'https://project-1-api.herokuapp.com/register'
-let apiKey = '23dd5f0b-ed3e-41a1-b637-2eca4e704536'
+let apiKey = 'b63ac6ba-bd53-4134-8589-1e26cf6b6b72'
 // const request = axios.get(apiRegister)
 // request.then((response) => {
 //     console.log(response)
@@ -17,6 +17,7 @@ axios.get(apiComments)
             return b.timestamp - a.timestamp;
         })
     })
+    console.log(sorted)
     return sorted
 })
 .then((response) => {
@@ -25,8 +26,7 @@ axios.get(apiComments)
     sortedComments.forEach(function (item) {
         createCommentElement(item);
     })
-})
-// })
+}) 
 
 //FUNCTION TO APPEND API KEY TO EACH REQUEST URL
 function appendKey(url) {

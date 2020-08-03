@@ -1,4 +1,3 @@
-
 function createCommentElement(comment) {
     const commentContainer = document.querySelector('.comment__data');
     const commentItem = document.createElement('div');
@@ -33,11 +32,6 @@ function createCommentElement(comment) {
     commentContainer.appendChild(commentItem);
 }
 
-// SORT BY DATE
-// function dateSort(array) {
-//     let sortedArray = array.slice().sort((a, b) => b.date - a.date);
-//     return sortedArray;
-// }
 
 function dateFormat(timestamp) {
     let date = new Date(timestamp)
@@ -55,24 +49,34 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
     let nameValue = event.target.name.value;
     let messageValue = event.target.comment.value;
-
     if (nameValue !== "" && messageValue !== "") {
         const apiComments = appendKey('https://project-1-api.herokuapp.com/comments')
         axios.post(apiComments, {
             name: nameValue,
-            comment: messageValue
+            comment: messageValue 
         })
         .then((response) =>{
             axios.get(apiComments)
             .then((response) => {
                 comments = response.data
+                sorted = []
+                comments.forEach(function(item) {
+                sorted.push(item)
+                sorted.sort(function(a, b) {
+                    return b.timestamp - a.timestamp;
+                })
+            })
+            return sorted
+            })
+            .then((response) => {
                 form.reset();
                 commentContainer.innerHTML = "";
-                let sortedComments = comments;
+                let sortedComments = response;
                 sortedComments.forEach(function(item) {
                     createCommentElement(item);
                 })
             })
+            // })
         })
     }
 });

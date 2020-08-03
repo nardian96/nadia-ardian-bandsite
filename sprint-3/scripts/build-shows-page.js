@@ -27,4 +27,15 @@ function createShowElement(show) {
     ticketWrap.appendChild(btn);
 }
 
+// const apiShows = appendKey('https://project-1-api.herokuapp.com/showdates')
+// axios.get(apiShows) 
+// .then(
+//     (response) => {
+//         shows = response.data
+//         console.log(shows)
+//         shows.forEach(function(item) {
+//             createShowElement(item)
+//         })
+//     }
+// )
 

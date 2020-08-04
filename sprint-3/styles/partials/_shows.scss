@@ -32,7 +32,11 @@
         padding-bottom: 1.5rem;
         text-align: left;
         color: black;
-        font-size: 14px;
+        font-size: 0.9rem;
+        &:first-child {
+            font-weight: bold;
+            font-size: 15px;
+        }
         &--date {
             &::before {
                 content: "DATES";
@@ -64,11 +68,6 @@ button {
     width: 18rem;
     margin: 0;
 }
-
-ul > li:first-child {
-    font-weight: bold;
-    font-size: 15px;
-} 
 
 //TABLET STYLING
 
@@ -121,9 +120,11 @@ ul > li:first-child {
         &__data {
             display: flex;
             flex-direction: column;
+            font-size: 0.87rem;
             flex-grow: 1;
             flex-basis: 0;
             padding: 0;
+            padding-right: 0.8rem;
             &--date {
                 &::before {
                     display: none;

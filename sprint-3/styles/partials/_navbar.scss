@@ -51,7 +51,7 @@ header {
     &--not-active {
         &:hover {
             color: darkgoldenrod;
-            font-size: medium;
+            font-size: normal;
             font-weight: bold;
         }
     }
@@ -62,7 +62,7 @@ header {
             content:'';
             position: absolute;
             bottom: 50px;
-            left:-50px;
+            left:-55px;
             top: 22px;
             height: 5px;
             width: 10rem;
@@ -70,10 +70,9 @@ header {
         }
         &:hover {
             color: darkgoldenrod;
-            font-size: medium;
+            font-size: normal;
             &::after {
                 background-color: darkgoldenrod;
-                top: 23px;
                 left: -55px;
             }
         } 
@@ -117,13 +116,12 @@ header {
             &:hover {
                 &::after {
                     background-color: darkgoldenrod;
-                    left: -7px;
+                    left: -10px;
                 }
             }
         }
         &--active-shows {
             &::after {
-            top: 42px;
             left: -20px;
             width: 5.5rem;
             }
@@ -166,17 +164,22 @@ header {
         &--active {
             &::after {
                 width: 5rem;
-                left: -5px;
+                left: -7px;
+            }
+            &:hover {
+                &::after {
+                    left: -7px;
+                }
             }
         }
         &--active-shows {
             &::after {
-            left: -20px;
+            left: -18px;
             }
             &:hover {
                 &::after {
                     background-color: darkgoldenrod;
-                    left: -15px;
+                    left: -18px;
                 }
             }
         }

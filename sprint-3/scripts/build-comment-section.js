@@ -1,3 +1,78 @@
+//FUNCTION TO FORMAT DATES
+function dateFormat(date) {
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    if (hours < 10) {
+        minutes = `0${hours}`;
+    }
+    if (day < 10){
+        day = `0${day}`;
+    }
+    if (month < 10){
+      month = `0${month}`;
+    }
+    if (year < 10){
+        year = `0${year}`;
+    }
+    return `${month}/${day}/${year}`;
+}
+
+//FUNCTION FOR DYNAMIC TIMESTAMP
+function timeAgo(dateParam) {
+if (!dateParam) {
+    return null;
+    }
+    const date = typeof dateParam === 'object' ? dateParam : new Date(dateParam);
+    const dayMilliseconds = 86400000;
+    const today = new Date();
+    const isToday = today.toDateString() === date.toDateString();
+    const yesterday = new Date(today - dayMilliseconds);
+    const isYesterday = yesterday.toDateString() === date.toDateString();
+    const thisYear = today.getFullYear()
+    const isThisYear = today.getFullYear() === date.getFullYear();
+    const diffYear = date.getFullYear();
+    const yearsDiff = diffYear - thisYear;
+    const isMoreThanAYear = diffYear > thisYear;
+    const seconds = Math.round((today - date) / 1000);
+    const minutes = Math.round(seconds / 60);
+  
+
+    if (seconds < 5) {
+    return 'now';
+    } 
+    else if (seconds < 60) {
+    return `${seconds} seconds ago`;
+    } 
+    else if (seconds < 90) {
+    return 'about a minute ago';
+    } 
+    else if (minutes < 60) {
+    return `${minutes} minutes ago`;
+    } 
+    else if (isToday) {
+    return dateFormat(date, 'Today'); 
+    } 
+    else if (isYesterday) {
+    return dateFormat(date, 'Yesterday'); 
+    } 
+    else if (isThisYear) {
+    return dateFormat(date, false, true);
+    }
+    else if (isMoreThanAYear) {
+    return `${yearsDiff} years ago`
+    } 
+    else {
+        return dateFormat(date);
+    }
+    
+}
+
 // FUNCTION TO CREATE DOM ELEMENTS FOR THE COMMENTS
 function createCommentElement(comment) {
     const commentContainer = document.querySelector('.comment__data');
@@ -20,7 +95,7 @@ function createCommentElement(comment) {
     content.classList.add('item__body');
 
     name.innerHTML = comment.name;
-    date.innerHTML = dateFormat(new Date(comment.timestamp));
+    date.innerHTML = timeAgo(new Date(comment.timestamp));
     content.innerHTML = comment.comment;
 
     contentHeader.appendChild(name);
@@ -33,39 +108,37 @@ function createCommentElement(comment) {
     commentContainer.appendChild(commentItem);
 }
 
-//FUNCTION TO FORMAT DATE 
-function dateFormat(timestamp) {
-    let date = new Date(timestamp)
-    let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-    let dateFormat = `${months[date.getMonth()]}/${date.getDate()}/${date.getFullYear()}`;
-    return dateFormat;
+
+//FUNCTION TO APPEND API KEY TO EACH REQUEST URL
+function appendKey(url) {
+    let apiURL = `${url}?api_key=${apiKey}`
+    console.log(apiURL)
+    return apiURL
 }
 
-// function dynamic(timestamp) {
-//     const earlyDate = new Date();
-//     const laterDate = new Date();
-
-//     const diffDate = earlyDate - laterDate;
-
-//     // console.log(diffDate)
-
-//     let date = new Date(timestamp)
-//     let months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-//     if (diffDate > 1564810570) {
-//         return "More than 1 year ago"
-//     }
-//     else if (diffdate > 1595828170) {
-//         return "More than 1 week ago"
-//     }
-//     else if (diffdate > 1596346570) {
-//         return "More than 1 day ago"
-//     }
-//     else if (diffdate >  )
-
-//     let dateFormat = `${months[date.getMonth()]}/${date.getDate()}/${date.getFullYear()}`;
-//     return dateFormat;
-// } 
-
+//GET DEFAULT COMMENTS DATA FROM WEB API 
+const apiRegister = 'https://project-1-api.herokuapp.com/register'
+let apiKey = '5a9e3f6a-a4c2-4a7e-8a3a-3b40ca07c71f'
+const apiComments = appendKey('https://project-1-api.herokuapp.com/comments')
+axios.get(apiComments)
+.then((response) => {
+    comments = response.data
+    sorted = []
+    comments.forEach(function(item) {
+        sorted.push(item)
+        sorted.sort(function(a, b) {
+            return b.timestamp - a.timestamp;
+        })
+    })
+    return sorted
+})
+.then((response) => {
+    sortedComments = response
+    console.log(response)
+    sortedComments.forEach(function (item) {
+        createCommentElement(item);
+    })
+})
 
 
 //EVENT LISTENER

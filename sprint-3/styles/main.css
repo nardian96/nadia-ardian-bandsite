@@ -151,7 +151,7 @@ header {
 
 .primary-nav--not-active:hover {
   color: darkgoldenrod;
-  font-size: medium;
+  font-size: normal;
   font-weight: bold;
 }
 
@@ -164,7 +164,7 @@ header {
   content: '';
   position: absolute;
   bottom: 50px;
-  left: -50px;
+  left: -55px;
   top: 22px;
   height: 5px;
   width: 10rem;
@@ -173,12 +173,11 @@ header {
 
 .primary-nav--active:hover {
   color: darkgoldenrod;
-  font-size: medium;
+  font-size: normal;
 }
 
 .primary-nav--active:hover::after {
   background-color: darkgoldenrod;
-  top: 23px;
   left: -55px;
 }
 
@@ -221,10 +220,9 @@ header {
   }
   .primary-nav--active:hover::after {
     background-color: darkgoldenrod;
-    left: -7px;
+    left: -10px;
   }
   .primary-nav--active-shows::after {
-    top: 42px;
     left: -20px;
     width: 5.5rem;
   }
@@ -254,14 +252,17 @@ header {
   }
   .primary-nav--active::after {
     width: 5rem;
-    left: -5px;
+    left: -7px;
+  }
+  .primary-nav--active:hover::after {
+    left: -7px;
   }
   .primary-nav--active-shows::after {
-    left: -20px;
+    left: -18px;
   }
   .primary-nav--active-shows:hover::after {
     background-color: darkgoldenrod;
-    left: -15px;
+    left: -18px;
   }
 }
 
@@ -531,7 +532,12 @@ header {
   padding-bottom: 1.5rem;
   text-align: left;
   color: black;
-  font-size: 14px;
+  font-size: 0.9rem;
+}
+
+.ticket__data:first-child {
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .ticket__data--date::before {
@@ -577,11 +583,6 @@ button {
   border: none;
   width: 18rem;
   margin: 0;
-}
-
-ul > li:first-child {
-  font-weight: bold;
-  font-size: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -654,12 +655,14 @@ ul > li:first-child {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-size: 0.87rem;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
     padding: 0;
+    padding-right: 0.8rem;
   }
   .ticket__data--date::before {
     display: none;
